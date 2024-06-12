@@ -123,55 +123,8 @@
 
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-    <h4 class="h4 mt-4">WELCOME, <?= ucfirst($users_profile->firstname) . ' ' . ucfirst($users_profile->lastname); ?></h4>
+    <h4 class="h4 mt-4">Halo, <?= ucfirst($users_profile->firstname) . ' ' . ucfirst($users_profile->lastname); ?></h4>
 </div>
-<!-- <div class="row">
-    <div class="col-lg-3">
-        <div class="card bg-light mb-3" style="max-width: 18rem;">
-            <div class="card-header">TOTAL CUSTOMERS</div>
-            
-                <div class="card-body">
-                <h5 class="card-title"><?=  $user_count; ?></h5>
-                    <p class="card-text"></p>
-               </div>
-        </div>
-    </div>
-
-    <div class="col-lg-3">
-        <div class="card bg-light mb-3" style="max-width: 18rem;">
-            <div class="card-header">TOTAL BOOKING</div>
-                <div class="card-body">
-                <h5 class="card-title"><?=  $booking_count; ?></h5>
-                    <p class="card-text"></p>
-               </div>
-        </div>
-    </div>
-       
-
-    <div class="col-lg-3">
-        <div class="card bg-light mb-3" style="max-width: 18rem;">
-            <div class="card-header">TOTAL PHOTOS</div>
-                <div class="card-body">
-                <h5 class="card-title"><?=  $gallery_count; ?></h5>
-                    <p class="card-text"></p>
-                </div>
-        </div>
-    </div>
-       
-
-    <div class="col-lg-3">
-        <div class="card bg-light mb-3" style="max-width: 18rem;">
-            <div class="card-header">TOTAL BLOGS</div>
-                <div class="card-body">
-                <h5 class="card-title"><?=  $event_post; ?></h5>
-                    <p class="card-text"></p>
-               </div>
-        </div>
-    </div>
-       
-       
-    
-</div> -->
 
     <div class="row">
     <div class="col-lg-3">

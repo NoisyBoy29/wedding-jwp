@@ -60,7 +60,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Add New Package Information - Administrator</title>
+        <title>Tambah Paket baru</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/dashboard.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
@@ -104,13 +104,13 @@
                     ?>
                     
                     <div class="form-group">
-                        <label for="wedding_type">Package Title</label>
-                        <input type="text" name="wedding_type" class="form-control" id="wedding_type"  placeholder="Enter package name" value="<?= $category->wedding_type ?>">
+                        <label for="wedding_type">Nama Paket</label>
+                        <input type="text" name="wedding_type" class="form-control" id="wedding_type"  placeholder="Masukan Nama Paket" value="<?= $category->wedding_type ?>">
                     </div>
 
                     <div class="form-group">
-                        <label for="price">Price Of This Package</label>
-                        <input type="text" name="price" class="form-control" id="price"  placeholder="Enter the price"  value="<?= $category->price ?>">
+                        <label for="price">Harga Paket</label>
+                        <input type="text" name="price" class="form-control" id="price"  placeholder="Masukan harga paket"  value="<?= $category->price ?>">
                     </div>
 
                     <div class="form-group">
@@ -118,7 +118,7 @@
                         <input type="file" name="preview_image" id="preview_image">
                    </div>
 
-                    <a href="service_list.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;">Cancel</a>
+                    <a href="service_list.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;">Batal</a>
 
                    <button type="submit" name="submit" class="btn btn-sm btn-success float-right mr-2" style="font-size: 12px;">Edit</button>
 

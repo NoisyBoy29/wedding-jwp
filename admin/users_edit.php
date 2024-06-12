@@ -102,7 +102,7 @@
             <form method="post" action="" enctype="multipart/form-data">
             
                 <h6 class="h6 mt-4 pb-2" style="border-bottom: 1px solid #dee2e6!important;">Edit User Information
-                    <a href="users.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;"><i class="mdi mdi-close-circle mr-2"></i> Cancel</a>
+                    <a href="users.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;"><i class="mdi mdi-close-circle mr-2"></i> Batal</a>
 
                     <button type="submit" name="submit" class="btn btn-sm btn-success float-right mr-2" style="font-size: 12px;"><i class="mdi mdi-account-plus mr-2"></i> Edit User</button>
                 </h6>

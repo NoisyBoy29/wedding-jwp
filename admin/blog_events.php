@@ -73,7 +73,7 @@
     <thead>
         <tr>
             <th>Title</th>
-            <th>Description</th>
+            <th>Deskripsi</th>
             <th>Location</th>
             <th>Status</th>
             <th>Tanggal Pernikahan</th>

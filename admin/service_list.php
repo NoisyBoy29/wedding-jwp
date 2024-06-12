@@ -53,10 +53,10 @@
 
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-    <h4 class="h4 mt-4 ml-3">Services And Packages</h4>
+    <h4 class="h4 mt-4 ml-3">Paket & Pelayanan Wedding</h4>
      <div class="btn-toolbar mb-2 mb-md-0">
         <div class="btn-group mr-2">
-            <a class="btn btn-md btn-success mr-2" style="font-size: 12px;" href="package_add.php"><i class="mdi mdi-buffer mr-2"></i> Add New Package</a>
+            <a class="btn btn-md btn-success mr-2" style="font-size: 12px;" href="package_add.php"><i class="mdi mdi-buffer mr-2"></i> Tambah Paket baru</a>
         </div>
     </div>
 </div>
@@ -83,7 +83,7 @@
                     <tr>
                         
                         <td class="special"><b><?= $category_row->wedding_type . ' Wedding Package';?></b></td>
-                        <td class="special">$ <b><?= number_format($category_row->price, 2);?></b></td>
+                        <td class="special">Rp <b><?= number_format($category_row->price, 2);?></b></td>
                         <td>
 
                             <a href="package_edit.php?id=<?= $category_row->id; ?>" class="btn btn-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Edit This Package">
@@ -104,10 +104,10 @@
 
         <div class="col-md-12 mt-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-                <h4 class="h4 mt-4 ml-3">Wedding Features</h4>
+                <h4 class="h4 mt-4 ml-3">Fitur Pelayanan Wedding</h4>
                  <div class="btn-toolbar mb-2 mb-md-0">
                     <div class="btn-group mr-2">
-                        <a class="btn btn-md btn-success mr-2" style="font-size: 12px;" href="feature_add.php"><i class="mdi mdi-clipboard-outline mr-2"></i> Add New Feature</a>
+                        <a class="btn btn-md btn-success mr-2" style="font-size: 12px;" href="feature_add.php"><i class="mdi mdi-clipboard-outline mr-2"></i> Tambah Fitur Pelayanan Baru</a>
                     </div>
                 </div>
             </div>
@@ -115,9 +115,9 @@
            <table id="features" class="table table-striped table-hover table-bordered table-sm" cellspacing="0" width="100%" style="background: white;padding: 5px;">
                 <thead>
                     <tr>
-                        <th>Wedding Type</th>
+                        <th>Paket Pernikahan</th>
                         <th>Title</th>
-                        <th>Description</th>
+                        <th>Deskripsi</th>
                         <th>Actions</th>
                     </tr>
                 </thead>

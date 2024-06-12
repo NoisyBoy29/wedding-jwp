@@ -103,7 +103,7 @@
                    <div class="form-group">
                        <input type="file" name="file">
                    </div>
-                   <button type="submit" name="submit" value="" class="btn btn-success btn-sm">Save image</button>
+                   <button type="submit" name="submit" value="" class="btn btn-success btn-sm">Simpan image</button>
                    <a href="photos_view.php" class="btn btn-danger btn-sm">Go Back</a>
                 </form><!-- end of input form -->
 <br>

@@ -1,5 +1,5 @@
 <?php 
-    include 'admin/include/init.php'; 
+    include '../admin/include/init.php'; 
 
     $gallery = Gallery::find_all(); 
 
@@ -14,9 +14,9 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="lightbox/css/lightbox.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../lightbox/css/lightbox.css">
     <style>
         body {
             font-family: 'Open Sans', 'Roboto', sans-serif;
@@ -104,7 +104,7 @@
     </style>
 </head>
 <body>
-<?php include 'include/nav.php'; ?>
+<?php include '../user/include/nav.php'; ?>
 
 <div class="container-fluid">
     <div class="row">
@@ -115,9 +115,9 @@
             <div class="card-columns">
                 <?php foreach($gallery as $galleries) : ?>
                 <div class="card" style="position: relative;">
-                    <a href="admin/<?= $galleries->picture_path(); ?>" data-lightbox="gallery-group-4">
-                        <img class="card-img-top" src="admin/<?= $galleries->picture_path(); ?>" alt="Card image cap">
-                    </a>
+                <a href="../admin/upload/gallery/<?= $galleries->picture_filename; ?>" data-lightbox="gallery-group-4">
+                    <img class="card-img-top" src="../admin/upload/gallery/<?= $galleries->picture_filename; ?>" alt="Card image cap">
+                </a>
                     <div class="card-body" style="position: absolute;bottom: 0;left:0; width: 100%;background: rgba(0,0,0, 0.5);color:white;padding: 10px 10px 0 10px;">
                         <p class="card-title text-capitalize" style="font-size:12px;"><?= empty($galleries->title) ? 'No Title' : $galleries->title; ?></p>
                     </div>
@@ -129,10 +129,10 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="js/jquery-3.2.1.slim.min.js"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="lightbox/js/lightbox-2.6.min.js"></script>
+<script src="../js/jquery-3.2.1.slim.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../lightbox/js/lightbox-2.6.min.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<?php include 'admin/include/init.php'; ?>
+<?php include '../admin/include/init.php'; ?>
 <?php 
 $category = Category::find_all();
 ?>
@@ -12,8 +12,8 @@ $category = Category::find_all();
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
     <style>
         body {
             margin-top: 6%;
@@ -80,14 +80,14 @@ $category = Category::find_all();
     </style>
 </head>
 <body>
-<?php include 'include/nav.php'; ?>
+<?php include '../user/include/nav.php'; ?>
 
 <div class="container" style="width: 70%;">
 
     <div class="row mb-3">
         <div class="col-lg-12">
-            <h3 class="h5 text-uppercase text-center text-muted">Wedding</h3>
-            <h2 class="h2 text-uppercase text-center mb-0">Select Package</h2>
+            <h3 class="h2 text-uppercase text-center text-muted">Daftar</h3>
+            <h2 class="h5 text-uppercase text-center mb-0">Paket Wedding</h2>
         </div>
     </div>
 
@@ -96,7 +96,7 @@ $category = Category::find_all();
         <div class="col-md-12 p-0" style="margin-bottom: 20px;"> <!-- border:1px solid rgba(0,0,0,.125) -->
 
             <div class="float-left">
-                <img src="admin/<?= $category_row->preview_image_picture(); ?>" style="width: 500px;" alt="">
+                <img src="../admin/<?= $category_row->preview_image_picture(); ?>" style="width: 500px;" alt="">
             </div>
             
             <div class="float-left" style="width: 47%;"> 
@@ -123,9 +123,9 @@ $category = Category::find_all();
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="js/jquery-3.2.1.slim.min.js"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="../js/jquery-3.2.1.slim.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>

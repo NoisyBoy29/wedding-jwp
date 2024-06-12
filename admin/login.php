@@ -50,7 +50,7 @@
 
 <body class="text-center">
 <form class="form-signin" action="" method="post">
-    <a href="index.php"><img class="mb-4" src="../images/logo/WPMSlogo.png" width="190" ></a>
+    <a href="index.php"><img class="mb-4" src="../images/logo/JeWePe.png" width="190" ></a>
     <h5 class="h5 mb-3 font-weight-normal" style="color:#222">Login As Administrator</h5>
     <?php
         if ($session->message()) {

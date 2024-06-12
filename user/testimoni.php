@@ -1,4 +1,4 @@
-<?php include 'admin/include/init.php'; ?>
+<?php include '../admin/include/init.php'; ?>
 
 <?php 
     $blogEvent = EventWedding::getEventBlogs();
@@ -12,9 +12,9 @@
     <title>Testimoni Client</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/datepicker.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/datepicker.css">
+    <link rel="stylesheet" href="../css/style.css">
     <style>
         body {
             background: #fff;
@@ -61,7 +61,7 @@
 </head>
 <body>
 <?php
-include "include/nav.php";
+include "../user/include/nav.php";
 ?>
 <div class="container">
     <div class="row">
@@ -72,7 +72,7 @@ include "include/nav.php";
            <div class="card-columns">
             <?php foreach($blogEvent as $blog_item) : ?>
                <div class="card">
-                <img class="card-img-top" src="admin/<?= $blog_item->preview_image_picture(); ?>" alt="Card image cap">
+                <img class="card-img-top" src="../admin/<?= $blog_item->preview_image_picture(); ?>" alt="Card image cap">
                 <div class="card-body">
                     <a href="wedding_details.php?id=<?= $blog_item->id; ?>" class="btn-stamp">
                         <h6 class="card-title mt-0 mb-0 text-center font-weight-bold font-custom text-uppercase"><?= $blog_item->title; ?></h6>
@@ -83,7 +83,6 @@ include "include/nav.php";
                 </div>
             </div> 
             <?php endforeach; ?>
-            <!-- <a href="real-weddings.php" class="btn btn-lg btn-block btn-explore">EXPLORE MORE INSPIRATION</a> -->
         </div>
 
        
@@ -92,9 +91,9 @@ include "include/nav.php";
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="js/jquery-3.2.1.slim.min.js"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="../js/jquery-3.2.1.slim.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>

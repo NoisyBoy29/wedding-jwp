@@ -98,7 +98,7 @@
                 <form method="post" action="">
 
                     <h4 class="h4 mt-4 pb-2" style="border-bottom: 1px solid #dee2e6!important;">Edit Client Information
-                        <a href="client.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;"><i class="mdi mdi-close-circle mr-2"></i> Cancel</a>
+                        <a href="client.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;"><i class="mdi mdi-close-circle mr-2"></i> Batal</a>
                         <button type="submit" name="submit" class="btn btn-sm btn-success float-right mr-2" style="font-size: 12px;"><i class="mdi mdi-account-plus mr-2"></i> Edit Customer</button>
                     </h4>
                     <div class="form-row">
@@ -127,7 +127,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <label for="wedding_type">Wedding Type</label>
+                            <label for="wedding_type">Paket Pernikahan</label>
                         </div>
 
                         <div class="input-group col-md-6">

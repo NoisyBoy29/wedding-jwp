@@ -6,14 +6,10 @@
     $booking_id = $_GET['booking_id'];
     $user_id = $_GET['user_id'];
     $links='booking_id='.$booking_id.'&user_id='.$user_id;
-    // $account_details = Account_Details::find_by_user_id($user_id);
-    // $booking_details = Booking::find_by_booking_id($booking_id);
-    // $category_details = Category::find_by_id($booking_details->wedding_type);
     $luquidate = Events::getLiquidation_by_id($booking_id);
     $amount = Liquidation::getTotalAmount($booking_id);
     $cash = Liquidation::getTotalAmountCash($booking_id);
     $credit = Liquidation::getTotalAmountCredit($booking_id);
-    // $events =  Events::find_by_event_all_budget($booking_id);
 
 ?>
 <?php $users_profile = Users::find_by_id($_SESSION['id']); ?>

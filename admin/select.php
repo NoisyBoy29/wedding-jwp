@@ -10,7 +10,7 @@
             <table class="table table-bordered">
             <tr>  
               <th width="30%"><label>Title</label></th>  
-              <th width="70%">Description</th>  
+              <th width="70%">Deskripsi</th>  
             </tr>';  
             if (mysqli_num_rows($result) > 0) {
               while($row = mysqli_fetch_array($result)) {  

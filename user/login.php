@@ -1,4 +1,4 @@
-<?php include_once 'admin/include/init.php';?>
+<?php include_once '../admin/include/init.php';?>
 <?php
  if (isset($_POST['login'])) {
      $input_email = clean($_POST['input_email']);
@@ -7,7 +7,7 @@
 
      if($logged) {
          $session->login($logged);
-         redirect_to("admin/client.php");
+         redirect_to("../admin/client.php");
      } else {
          redirect_to("login.php");
          $session->message("
@@ -31,15 +31,15 @@
     <title>Login Your Account</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/signin.css" rel="stylesheet">
+    <link href="../css/signin.css" rel="stylesheet">
 </head>
 
 <body class="text-center">
 <form class="form-signin" action="login.php" method="post">
-    <a href="index.php"><img class="mb-4" src="images/logo/WPMSlogo.png" width="190" ></a>
+    <a href="index.php"><img class="mb-4" src="images/logo/JeWePe.png" width="190" ></a>
     <h3 class="h3 mb-3 font-weight-normal">Login Your Account</h3>
     <?php
         if ($session->message()) {
@@ -60,10 +60,10 @@
     <button class="btn btn-lg btn-success btn-block" type="submit" name="login">Login</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
 </form>
-<script src="js/jquery-3.2.1.slim.min.js"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="../js/jquery-3.2.1.slim.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 <script>
     $('.your-checkbox').prop('indeterminate', true);
 </script>

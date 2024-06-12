@@ -45,7 +45,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Add New Package Information - Administrator</title>
+        <title>Tambah Paket baru</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/dashboard.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
@@ -89,13 +89,13 @@
                     ?>
 
                     <div class="form-group">
-                        <label for="title">Feature Title</label>
-                        <input type="text" value="<?= $features->title; ?>" name="title" class="form-control" id="title"  placeholder="Enter package name">
+                        <label for="title">Nama Fitur</label>
+                        <input type="text" value="<?= $features->title; ?>" name="title" class="form-control" id="title"  placeholder="Masukan Nama Paket">
                     </div>
 
                     
                     <div class="form-group">
-                        <label for="wedding_type">Wedding Type</label>
+                        <label for="wedding_type">Paket Pernikahan</label>
                         <select name="wedding_type" id="wedding_type" class="form-control">
                         <?php foreach ($category as $categories) : ?>
                             <?php if($categories->id  == $features->category_id) : ?>
@@ -111,12 +111,12 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="description">Description</label>
-                        <textarea name="description" class="form-control" id="description" rows="3" placeholder="Leave description about this feature"><?= $features->description; ?></textarea>
+                        <label for="description">Deskripsi</label>
+                        <textarea name="description" class="form-control" id="description" rows="3" placeholder="Penjelasan Fitur Pelayanan"><?= $features->description; ?></textarea>
                     </div>
-                     <a href="service_list.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;">Cancel</a>
+                     <a href="service_list.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;">Batal</a>
 
-                        <button type="submit" name="submit" class="btn btn-sm btn-light float-right mr-2" style="font-size: 12px;">Save</button>
+                        <button type="submit" name="submit" class="btn btn-sm btn-light float-right mr-2" style="font-size: 12px;">Simpan</button>
                 </form><!-- end of input form -->
             </div>
         </div>

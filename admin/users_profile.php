@@ -200,7 +200,7 @@
                     </select>
                 </div>
                  <a href="users.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;">
-                    <i class="mdi mdi-close-circle mr-2"></i> Cancel
+                    <i class="mdi mdi-close-circle mr-2"></i> Batal
                 </a>
 
                 <button type="submit" name="submit" class="btn btn-sm btn-success float-right mr-2" style="font-size: 12px;">

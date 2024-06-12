@@ -102,7 +102,7 @@
                 <form method="post" action="">
 
                     <h4 class="h4 mt-4 pb-2" style="border-bottom: 1px solid #dee2e6!important;">Edit Guest Information
-                        <a href="guest_list.php?<?= $links;?>" class="btn btn-sm btn-danger float-right" style="font-size: 12px;"><i class="mdi mdi-close-circle mr-2"></i> Cancel</a>
+                        <a href="guest_list.php?<?= $links;?>" class="btn btn-sm btn-danger float-right" style="font-size: 12px;"><i class="mdi mdi-close-circle mr-2"></i> Batal</a>
 
                         <button type="submit" name="submit" class="btn btn-sm btn-success float-right mr-2" style="font-size: 12px;"><i class="mdi mdi-account-edit mr-2"></i> Edit</button>
                     </h4>

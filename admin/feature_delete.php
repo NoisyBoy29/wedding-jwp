@@ -3,7 +3,7 @@
 <?php 
 
 if (!isset($_SESSION['id'])) {
-	redirect_to("../login.php");
+	redirect_to("/user/login.php");
 }
 
 if(empty($_GET['id'])) {

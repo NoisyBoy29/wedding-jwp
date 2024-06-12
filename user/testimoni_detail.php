@@ -7,9 +7,9 @@
     <title>Megan & Loukas Wedding</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/datepicker.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/datepicker.css">
+    <link rel="stylesheet" href="../css/style.css">
     <style>
         body {
             background: #fff;
@@ -41,16 +41,16 @@
                     <a class="nav-link" href="index.php">Beranda <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pricing.php">Daftar Harga</a>
+                    <a class="nav-link" href="user/pricing.php">Daftar Harga</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="real-weddings.php">Testimoni</a>
+                    <a class="nav-link" href="user/testimoni.php">Testimoni</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="gallery.php">Galeri</a>
+                    <a class="nav-link" href="user/gallery.php">Galeri</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.php">Kontak Kami</a>
+                    <a class="nav-link" href="user/tentang_kami.php">Kontak Kami</a>
                 </li>
             </ul>
             <div class="form-inline mr-2">
@@ -159,7 +159,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="register.php" method="post">
+                <form action="../user/register.php" method="post">
                     <div class="form-group row">
                         <label for="inputEmail" class="col-sm-2 col-form-label">Email:</label>
                         <div class="col-sm-10">
@@ -193,9 +193,9 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="js/jquery-3.2.1.slim.min.js"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="../js/jquery-3.2.1.slim.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>

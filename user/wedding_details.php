@@ -1,4 +1,4 @@
-<?php include 'admin/include/init.php'; ?>
+<?php include '../admin/include/init.php'; ?>
 <?php
 $id = $_GET['id'];
 $blogspot = EventWedding::find_by_id($id);
@@ -14,9 +14,9 @@ $blogspot = EventWedding::find_by_id($id);
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
     <style>
         body {
             margin-top: 6%;
@@ -74,7 +74,7 @@ $blogspot = EventWedding::find_by_id($id);
 </head>
 <body>
 
-<?php include 'include/nav.php'; ?>
+<?php include '../user/include/nav.php'; ?>
 
 <div class="container">
 
@@ -84,7 +84,7 @@ $blogspot = EventWedding::find_by_id($id);
             <h3 class="h5 text-uppercase text-center text-muted mt-4">Wedding</h3>
             <h2 class="h2 text-uppercase text-center mb-4"><?= $blogspot->wedding_type; ?></h2>
             <div class="text-center">
-                <img src="admin/<?= $blogspot->preview_image_picture(); ?>" class="img-fluid rounded-circle" style="width:270px;height:250px;" alt="">
+                <img src="../admin/<?= $blogspot->preview_image_picture(); ?>" class="img-fluid rounded-circle" style="width:270px;height:250px;" alt="">
             </div>
             <h5 class="h5 text-uppercase text-center mt-3"><?= $blogspot->title; ?></h5>
             <div class="font-weight-light text-center mb-3" style="font-size:16px;"><?= $blogspot->location; ?></div>
@@ -98,11 +98,11 @@ $blogspot = EventWedding::find_by_id($id);
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="js/jquery-3.2.1.slim.min.js"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="../js/jquery-3.2.1.slim.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/bootstrap-datepicker.min.js"></script>
 
 <script>
 

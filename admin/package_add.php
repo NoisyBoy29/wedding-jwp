@@ -44,7 +44,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Add New Package Information - Administrator</title>
+        <title>Tambah Paket baru</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/dashboard.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
@@ -79,7 +79,7 @@
             
                 <form method="post" action="" enctype="multipart/form-data">
 
-                    <h4 class="h4 mt-4 pb-2" style="border-bottom: 1px solid #dee2e6!important;">Add New Package</h4>
+                    <h4 class="h4 mt-4 pb-2" style="border-bottom: 1px solid #dee2e6!important;">Tambah Paket baru</h4>
 
                     <?php
                         if ($session->message()) {
@@ -88,22 +88,22 @@
                     ?>
 
                     <div class="form-group">
-                        <label for="wedding_type">Package Title</label>
-                        <input type="text" name="wedding_type" class="form-control" id="wedding_type"  placeholder="Enter package name">
+                        <label for="wedding_type">Nama Paket</label>
+                        <input type="text" name="wedding_type" class="form-control" id="wedding_type"  placeholder="Masukan Nama Paket">
                     </div>
                    
                     <div class="form-group">
-                        <label for="price">Price Of This Package</label>
-                        <input type="text" name="price" class="form-control" id="price"  placeholder="Enter the price">
+                        <label for="price">Harga Paket</label>
+                        <input type="text" name="price" class="form-control" id="price"  placeholder="Masukan harga paket">
                     </div>
 
                     <div class="form-group">
                         <label for="preview_image">Preview Image</label>
                         <input type="file" name="preview_image">
                    </div>
-                     <a href="services_list.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;">Cancel</a>
+                     <a href="service_list.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;">Batal</a>
 
-                        <button type="submit" name="submit" class="btn btn-sm btn-success float-right mr-2" style="font-size: 12px;">Save</button>
+                        <button type="submit" name="submit" class="btn btn-sm btn-success float-right mr-2" style="font-size: 12px;">Simpan</button>
                 </form><!-- end of input form -->
             </div>
         </div>

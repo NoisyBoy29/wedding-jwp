@@ -108,7 +108,7 @@ $category = Category::find_all();
 
                     <h4 class="h4 mt-4 pb-2" style="border-bottom: 1px solid #dee2e6!important;">Edit Article 
 
-                        <a href="blog_events.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;"><i class="mdi mdi-close-circle mr-2"></i> Cancel</a>
+                        <a href="blog_events.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;"><i class="mdi mdi-close-circle mr-2"></i> Batal</a>
 
                         <button type="submit" name="submit" class="btn btn-sm btn-success float-right mr-2" style="font-size: 12px;"><i class="mdi mdi-account-plus mr-2"></i> Edit article</button>
 
@@ -148,7 +148,7 @@ $category = Category::find_all();
                         </div>
 
                     <div class="form-group">
-                        <label for="description">Description:</label>
+                        <label for="description">Deskripsi:</label>
                         <textarea name="description" id="description" cols="30" rows="10" class="form-control" placeholder="Enter description and vendor of this wedding"><?= $event_wedding->description; ?></textarea>
                     </div>
 

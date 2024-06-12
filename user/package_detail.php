@@ -1,4 +1,4 @@
-<?php include 'admin/include/init.php'; ?>
+<?php include '../admin/include/init.php'; ?>
 <?php 
     $id = $_GET['id'];
     $category = Category::find_by_id($id);
@@ -142,8 +142,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <style>
         body {
@@ -206,7 +206,7 @@
 </head>
 <body>
 
-<?php include 'include/nav.php'; ?>
+<?php include '../user/include/nav.php'; ?>
 
 <div class="container">
     
@@ -241,11 +241,11 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="js/jquery-3.2.1.slim.min.js"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="../js/jquery-3.2.1.slim.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/bootstrap-datepicker.min.js"></script>
 
 <script>
 

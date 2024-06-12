@@ -137,7 +137,7 @@
     </style>
 </head>
 <body>
-<?php include 'include/nav.php'; ?>
+<?php include 'user/include/nav.php'; ?>
 
 <div class="container-fluid">
     <div class="row justify-content-md-center">
@@ -167,7 +167,7 @@
                             <input type="text" class="form-control" name="user_email" id="user_email" placeholder="youremailaddress@mail.com">
                         </div>
                         <div class="form-group">
-                            <input type="text" aria-describedby="phoneHelpBlock" class="form-control" name="user_phone" id="user_phone" placeholder="Contact Number">
+                            <input type="text" aria-describedby="phoneHelpBlock" class="form-control" name="user_phone" id="user_phone" placeholder="Nomor Telepon">
                         </div>
                         <div class="form-row">
                             <div class="input-group col-md-5">
@@ -182,7 +182,7 @@
                         </div>
                         <div class="text-center mt-3">
                             <button type="submit" name="register" class="btn btn-danger btn-sm text-uppercase fb"
-                                    style="margin-top: -5px;">Sign Up
+                                    style="margin-top: -5px;">Daftar
                             </button>
                         </div>
                     </form>
@@ -245,78 +245,11 @@
                     </div> 
                 <?php endforeach; ?>
 
-                <a href="real-weddings.php" class="btn btn-lg btn-block btn-explore">Testimoni lain</a>
+                <a href="testimoni.php" class="btn btn-lg btn-block btn-explore">Testimoni lain</a>
             </div>
         </div><!-- end of col-lg-12 -->
     </div><!-- end of row -->
 </div><!-- end of container -->
-
-
-<div class="container-fluid" style="width: 100%;background: white;margin-top: 50px;padding-bottom: 20px;">
-    <div class="row">
-        <div class="col-lg-6">
-            <div class="row img-control">
-                <div class="col-md-1"></div>
-                <div class="col-md-2">
-                    <img src="DESIGN/checklist-ea253352239433deb24f2ed8ae110aac1840ff8fa5df43967027e880b5f5385b.svg"
-                         alt="">
-                    <div class="font-custom">CheckList</div>
-                </div>
-                <div class="col-md-2">
-                    <img src="DESIGN/seating-chart-084bbdaabe84a638edf344224d7a92b1bc792db53c5fcf7ab16fcd5a6109ff79.svg"
-                         alt="">
-                    <div class="font-custom">Seating Chart</div>
-                </div>
-                <div class="col-md-2">
-                    <img src="DESIGN/guest-list-eaaf9277c60be7449e41e2f72f358ae3c94c1b31726b894e064498a9536cac9a.svg"
-                         alt="">
-                    <div class="font-custom">Guess List</div>
-                </div>
-                <div class="col-md-2">
-                    <img src="DESIGN/budget-6eca6d3898f15dd5682ce3664d8d9ff9bdd271db03857ba8a99e90b9181db46c.svg"
-                         alt="">
-                    <div class="font-custom">Budget</div>
-                </div>
-                <div class="col-md-2">
-                    <img src="DESIGN/vendor-manager-102fbe8fdbab3e176a6d29bd05c6f26dcd35cfa0f55ff50b1bfd9e70c8fdcdda.svg"
-                         alt="">
-                    <div class="font-custom">Vendor Manager</div>
-                </div>
-
-            </div>
-                <h1 class="h1 text-center mt-4">Take the Stress Out of Planning</h1>
-                <p class="lead text-muted text-center ml-5" style="font-size: 14px;">Check things off your personalized to-do list all the way to your big day!</p>
-        </div>
-        <div class="col-lg-6">
-            <div class="feature">
-                <ul class="list-group rounded-0">
-                    <li class="list-group-item rounded-0 d-flex justify-content-between align-items-center ">Announcement your engagement
-                        <span class="badge badge-pill" style="font-size: 12px;font-weight: bold;color:#888;">OverDue <i class="mdi mdi-checkbox-blank-outline ml-3" ></i></span>
-                    </li>
-                    <li class="list-group-item rounded-0 d-flex justify-content-between align-items-center">Plan your engagement party
-                        <span class="badge badge-pill" style="font-size: 12px;color:#888">Today <i class="mdi mdi-checkbox-blank-outline ml-3"></i></span>
-                    </li>
-                    <li class="list-group-item rounded-0 d-flex justify-content-between align-items-center">Schedule an engagement photo shoot
-                        <span class="badge badge-pill" style="font-size: 12px;color:#888">Tomorrow <i class="mdi mdi-checkbox-blank-outline ml-3"></i></span>
-                    </li>
-                    <li class="list-group-item rounded-0 d-flex justify-content-between align-items-center">Set up your registry
-                        <span class="badge badge-pill" style="font-size: 12px;color:#888">May 15 <i class="mdi mdi-checkbox-blank-outline ml-3"></i></span>
-                    </li>
-                    <li class="list-group-item rounded-0 d-flex justify-content-between align-items-center">Start your guest list
-                        <span class="badge badge-pill" style="font-size: 12px;color:#888">Today <i class="mdi mdi-checkbox-blank-outline ml-3"></i></span>
-                    </li>
-                    <li class="list-group-item rounded-0 d-flex justify-content-between align-items-center">Decide on your wedding
-                        <span class="badge badge-pill" style="font-size: 12px;color:#888">June 10 <i class="mdi mdi-checkbox-blank-outline ml-3"></i></span>
-                    </li>
-                    <li class="list-group-item rounded-0 d-flex justify-content-between align-items-center">Select your Tanggal Pernikahan
-                        <span class="badge badge-pill" style="font-size: 12px;color:#888">June 20 <i class="mdi mdi-checkbox-blank-outline ml-3"></i></span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <footer class="pt-3">
     <div class="row">
@@ -331,11 +264,11 @@
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="js/jquery-3.2.1.slim.min.js"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap-datepicker.min.js"></script>
-<script src="js/savy.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/bootstrap-datepicker.min.js"></script>
+<script src="../js/savy.js"></script>
 <script>
 
     $(document).ready(function () {

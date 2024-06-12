@@ -175,7 +175,7 @@ if (isset($_POST['fraud'])) {
                         </div>
 
                         <div class="col-md-6">
-                            <label>Wedding Type</label>
+                            <label>Paket Pernikahan</label>
                         </div>
 
                         <div class="input-group col-md-6">
@@ -268,13 +268,13 @@ if (isset($_POST['fraud'])) {
                     </div>
 
 					<div class="form-group">
-                        <label for="Inputdescription">Description</label>
+                        <label for="Inputdescription">Deskripsi</label>
                         <textarea name="description" class="form-control" id="Inputdescription" placeholder="Enter expected visitor" rows="5"><?= $account_detail->description; ?></textarea>
                     </div>
 
                
                     <button type="submit" name="cancel" class="btn btn-sm btn-secondary float-right mr-2" style="font-size: 12px;" value="">
-                    	<i class="mdi mdi-cancel mr-2"></i> Cancel Booking
+                    	<i class="mdi mdi-cancel mr-2"></i> Batal Booking
 					</button>
 					<button type="submit" name="fraud" class="btn btn-sm btn-danger float-right mr-2" style="font-size: 12px;" value="">
 						<i class="mdi mdi-linux mr-2"></i> Fraud Booking

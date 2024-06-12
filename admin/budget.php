@@ -94,17 +94,6 @@
         </tr>
     </thead>
 
-    <!-- <tfoot>
-        <tr>
-            <th>Package</th>
-            <th>Budgeted Amount</th>
-            <th>Actual Amount</th>
-            <th>Amount Paid To Date</th>
-            <th>Balance Due</th>
-            <th>Action</th>
-        </tr>
-    </tfoot> -->
-
     <tbody>
         <tr>
 

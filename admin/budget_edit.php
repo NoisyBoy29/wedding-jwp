@@ -129,7 +129,7 @@
                     </div>
 
 
-                    <a href="budget.php?<?=$links; ?>" class="btn btn-sm btn-danger float-right" style="font-size: 12px;">Cancel</a>
+                    <a href="budget.php?<?=$links; ?>" class="btn btn-sm btn-danger float-right" style="font-size: 12px;">Batal</a>
                     <button type="submit" name="submit" class="btn btn-sm btn-light float-right mr-2" style="font-size: 12px;">Modify</button>
 
                 </form><!-- end of input form -->

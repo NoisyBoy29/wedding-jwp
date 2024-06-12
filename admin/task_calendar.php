@@ -158,7 +158,7 @@
               <div class="modal-footer">
                 <input type="hidden" name="booking_id" value="<?= $_GET['booking_id']; ?>">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-success">Save</button>
+                <button type="submit" class="btn btn-success">Simpan</button>
               </div>
             </form>
             </div>
@@ -212,7 +212,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Save changes</button>
+                <button type="submit" class="btn btn-primary">Simpan changes</button>
               </div>
             </form>
             </div>

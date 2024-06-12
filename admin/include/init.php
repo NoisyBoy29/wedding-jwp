@@ -1,6 +1,6 @@
 <?php
 ob_start();
-date_default_timezone_set('Asia/Manila');
+date_default_timezone_set('Asia/Bangkok');
 $webroot = "c:xampp/htdocs/";
 define('DS', DIRECTORY_SEPARATOR);
 define('SITE_ROOT', $webroot.DS.'wedding-jwp'.DS.'admin');

@@ -1,4 +1,4 @@
-<?php include 'admin/include/init.php'; ?>
+<?php include '../admin/include/init.php'; ?>
 <?php
 $count = 0;
 $error = '';
@@ -21,7 +21,7 @@ if (isset($_POST['register'])) {
     $checkdate = $booking->check_wedding_date($wedding_date);
 
     if ($checkdate) {
-        redirect_to("sign_up.php");
+        redirect_to("../user/sign_up.php");
         $session->message("
             <div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
               <strong><i class='mdi mdi-alert'></i></strong>  The wedding you enter is already booked. Please Try another set of date!
@@ -37,7 +37,7 @@ if (isset($_POST['register'])) {
         empty($user_email) ||
         empty($user_lastname) ||
         empty($wedding_date)) {
-        redirect_to("sign_up.php");
+        redirect_to("../user/sign_up.php");
         $session->message("
             <div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
               <strong><i class='mdi mdi-alert'></i></strong>  Please Fill up all the fields.
@@ -49,7 +49,7 @@ if (isset($_POST['register'])) {
     }
 
     if (!filter_var($user_email, FILTER_VALIDATE_EMAIL)){
-        redirect_to("sign_up.php");
+        redirect_to("../user/sign_up.php");
         $session->message("
             <div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
               <strong><i class='mdi mdi-alert'></i></strong>  Incorrect email format.
@@ -64,7 +64,7 @@ if (isset($_POST['register'])) {
     $check_email = $accounts->email_exists($user_email);
 
     if ($check_email) {
-        redirect_to("sign_up.php");
+        redirect_to("../user/sign_up.php");
         $session->message("
             <div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
               <strong><i class='mdi mdi-alert'></i></strong>  Email is already Exists.
@@ -111,9 +111,9 @@ if (isset($_POST['register'])) {
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/datepicker.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/datepicker.css">
+    <link rel="stylesheet" href="../css/style.css">
     <style>
         body {
             font-family: 'Open Sans', 'Roboto', sans-serif;
@@ -192,7 +192,7 @@ if (isset($_POST['register'])) {
             height: 550px;
             width: 100%;
             border-color: rgba(0, 0, 0, 0.02);
-            background: url(images/carousel2.jpg);
+            background: url(../images/carousel2.jpg);
             background-size: contain;
             background-size: 100% 100%;
 
@@ -314,7 +314,7 @@ if (isset($_POST['register'])) {
 </head>
 <body>
 
-<?php include 'include/nav.php';?>
+<?php include '../user/include/nav.php';?>
 
 <div class="container-fluid">
     <div class="row justify-content-md-center">
@@ -338,7 +338,7 @@ if (isset($_POST['register'])) {
                                 <input type="text" class="form-control" name="user_email" id="user_email" placeholder="youremailaddress@mail.com">
                             </div>
                             <div class="form-group">
-                                <input type="text" aria-describedby="phoneHelpBlock" class="form-control" name="user_phone" id="user_phone" placeholder="Contact Number">
+                                <input type="text" aria-describedby="phoneHelpBlock" class="form-control" name="user_phone" id="user_phone" placeholder="Nomor Telepon">
                             </div>
                             <div class="form-row">
                                 <div class="input-group col-md-5">
@@ -353,7 +353,7 @@ if (isset($_POST['register'])) {
                             </div>
                             <div class="text-center mt-3">
                                 <button type="submit" name="register" class="btn btn-danger btn-sm text-uppercase fb"
-                                        style="margin-top: -5px;">Sign Up
+                                        style="margin-top: -5px;">Daftar
                                 </button>
                             </div>
                         </form>
@@ -377,12 +377,12 @@ if (isset($_POST['register'])) {
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="js/jquery-3.2.1.slim.min.js"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap-datepicker.min.js"></script>
-<script src="js/savy.js"></script>
+<script src="../js/jquery-3.2.1.slim.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/bootstrap-datepicker.min.js"></script>
+<script src="../js/savy.js"></script>
 <script>
 
     $(document).ready(function () {

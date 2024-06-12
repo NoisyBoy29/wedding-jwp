@@ -104,9 +104,9 @@
                     <?= isset($msg) ? $msg : ''; ?>
                     <h4 class="h4 mt-4 pb-2" style="border-bottom: 1px solid #dee2e6!important;">New Article 
 
-                        <a href="blog_events.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;"><i class="mdi mdi-close-circle mr-2"></i> Cancel</a>
+                        <a href="blog_events.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;"><i class="mdi mdi-close-circle mr-2"></i> Batal</a>
 
-                        <button type="submit" name="submit" class="btn btn-sm btn-success float-right mr-2" style="font-size: 12px;"><i class="mdi mdi-account-plus mr-2"></i> Save article</button>
+                        <button type="submit" name="submit" class="btn btn-sm btn-success float-right mr-2" style="font-size: 12px;"><i class="mdi mdi-account-plus mr-2"></i> Simpan article</button>
 
                     </h4>
                         <?php
@@ -115,7 +115,7 @@
                             }
                         ?>
                         <div class="form-group">
-                            <label for="booking_id">Wedding Type:</label>
+                            <label for="booking_id">Paket Pernikahan:</label>
                             <select class="custom-select form-control" id="wedding_type" name="wedding_type">
                               <?php foreach($category as $category_item) : ?>
                                   <option value="<?= $category_item->wedding_type; ?>" selected><?= ucfirst($category_item->wedding_type); ?></option>
@@ -141,7 +141,7 @@
                         </div>
 
                     <div class="form-group">
-                        <label for="description">Description:</label>
+                        <label for="description">Deskripsi:</label>
                         <textarea name="description" id="description" cols="30" rows="10" class="form-control" placeholder="Enter description and vendor of this wedding"></textarea>
                     </div>
 
