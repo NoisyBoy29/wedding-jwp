@@ -26,7 +26,7 @@
             </ul>
             <div class="form-inline mr-2">
                 <a class="btn btn-sm my-2 my-sm-0 loginbtn" href="/wedding-jwp/admin/login.php">Admin Login</a>
-                <a class="btn btn-sm my-2 my-sm-0 mr-2 loginbtn" href="/wedding-jwp/user/sign_up.php">Join Now</a>
+                <a class="btn btn-sm my-2 my-sm-0 mr-2 loginbtn" href="/wedding-jwp/user/sign_up.php">RSVP</a>
             </div>
         </div>
     </div>

@@ -109,14 +109,13 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12">
-            <h4 class="text-center mb-0 mt-5">Wedding Photos</h4>
-            <p class="text-center mt-0 text-muted">Photos That Capture Your Moment</p>
+            <h4 class="text-center mb-0 mt-5">Wedding Foto</h4>
 
             <div class="card-columns">
                 <?php foreach($gallery as $galleries) : ?>
                 <div class="card" style="position: relative;">
-                <a href="../admin/upload/gallery/<?= $galleries->picture_filename; ?>" data-lightbox="gallery-group-4">
-                    <img class="card-img-top" src="../admin/upload/gallery/<?= $galleries->picture_filename; ?>" alt="Card image cap">
+                <a href="/wedding-jwp/admin/upload/gallery/<?= $galleries->picture_filename; ?>" data-lightbox="gallery-group-4">
+                    <img class="card-img-top" src="/wedding-jwp/admin/upload/gallery/<?= $galleries->picture_filename; ?>" alt="Card image cap">
                 </a>
                     <div class="card-body" style="position: absolute;bottom: 0;left:0; width: 100%;background: rgba(0,0,0, 0.5);color:white;padding: 10px 10px 0 10px;">
                         <p class="card-title text-capitalize" style="font-size:12px;"><?= empty($galleries->title) ? 'No Title' : $galleries->title; ?></p>

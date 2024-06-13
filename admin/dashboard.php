@@ -15,7 +15,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Dashboard - Administrator</title>
+    <title>Dashboard</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -131,7 +131,7 @@
       <div class="card-counter primary">
         <i class="mdi mdi-account-multiple"></i>
         <span class="count-numbers"><?=  $user_count; ?></span>
-        <span class="count-name">Total Customers</span>
+        <span class="count-name">Total Client</span>
       </div>
     </div>
 
@@ -139,7 +139,7 @@
       <div class="card-counter success">
         <i class="mdi mdi-book-open-page-variant"></i>
         <span class="count-numbers"><?=  $booking_count; ?></span>
-        <span class="count-name">Total Bookings</span>
+        <span class="count-name">Total Pesanan</span>
       </div>
     </div>
 
@@ -147,7 +147,7 @@
       <div class="card-counter danger">
         <i class="mdi mdi-image-multiple"></i>
         <span class="count-numbers"><?=  $gallery_count; ?></span>
-        <span class="count-name">Photos</span>
+        <span class="count-name">Foto</span>
       </div>
     </div>
 
@@ -155,7 +155,7 @@
       <div class="card-counter info">
         <i class="mdi mdi-comment-text"></i>
         <span class="count-numbers"><?=  $event_post; ?></span>
-        <span class="count-name">Blogs</span>
+        <span class="count-name">Testimoni</span>
       </div>
     </div>
   </div>

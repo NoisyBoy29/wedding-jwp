@@ -328,14 +328,14 @@ if (isset($_POST['register'])) {
                         <p class="lead text-center" style="color:white;">Silahkan mengisi form berikut</p>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <input type="text" class="form-control" name="user_firstname" placeholder="First Name" id="user_firstname">
+                                    <input type="text" class="form-control" name="user_firstname" placeholder="Nama Depan" id="user_firstname">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <input type="text" id="user_lastname" class="form-control" name="user_lastname" placeholder="Last Name">
+                                    <input type="text" id="user_lastname" class="form-control" name="user_lastname" placeholder="Nama Belakang">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="user_email" id="user_email" placeholder="youremailaddress@mail.com">
+                                <input type="text" class="form-control" name="user_email" id="user_email" placeholder="Masukan Email">
                             </div>
                             <div class="form-group">
                                 <input type="text" aria-describedby="phoneHelpBlock" class="form-control" name="user_phone" id="user_phone" placeholder="Nomor Telepon">
@@ -353,7 +353,7 @@ if (isset($_POST['register'])) {
                             </div>
                             <div class="text-center mt-3">
                                 <button type="submit" name="register" class="btn btn-danger btn-sm text-uppercase fb"
-                                        style="margin-top: -5px;">Daftar
+                                        style="margin-top: -5px;">Reservasi
                                 </button>
                             </div>
                         </form>

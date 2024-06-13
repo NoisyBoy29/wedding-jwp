@@ -216,7 +216,7 @@
             <div class="float-left bg-white">
                 <h5 class="h5 text-uppercase mb-5 pt-3 pl-3 pr-3">
                     <span class="float-left text-capitalize"><?= $category->wedding_type; ?> Package Wedding</span>
-                    <span class="float-right text-capitalize">Price: $ <?= number_format($category->price,2); ?></span>
+                    <span class="float-right text-capitalize">Price: Rp  <?= number_format($category->price,2); ?></span>
                 </h5>
                 <img src="admin/<?= $category->preview_image_picture(); ?>" style="width: 700px;" alt="">
 

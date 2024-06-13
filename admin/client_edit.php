@@ -62,7 +62,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Edit Client Information - Administrator</title>
+        <title>Edit Client Information</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/dashboard.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
@@ -104,12 +104,12 @@
                     <div class="form-row">
 
                         <div class="form-group col-md-6">
-                            <label for="inputFirstname">Firstname</label>
+                            <label for="inputFirstname">Nama Depan</label>
                             <input type="text" name="firstname" class="form-control" id="inputFirstname" value="<?= $account_detail->firstname; ?>" placeholder="Enter firstname">
                         </div>
 
                         <div class="form-group col-md-6">
-                            <label for="inputLastname">Lastname</label>
+                            <label for="inputLastname">Nama Belakang</label>
                             <input type="text" name="lastname" class="form-control" id="inputLastname" value="<?= $account_detail->lastname; ?>" placeholder="Enter lastname">
                         </div>
 
@@ -179,12 +179,12 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="inputPhone">Phone</label>
-                            <input type="text" class="form-control" value="<?= $account_detail->phone; ?>" id="inputPhone" name="phone" placeholder="Enter Phone Number">
+                            <label for="inputPhone">Nomor Telepon</label>
+                            <input type="text" class="form-control" value="<?= $account_detail->phone; ?>" id="inputPhone" name="phone" placeholder="Masukan Nomor Telepon Number">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="inputcity">City</label>
-                            <input type="text" class="form-control" value="<?= $account_detail->city; ?>" id="inputcity" name="city" placeholder="Enter City">
+                            <label for="inputcity">Kota</label>
+                            <input type="text" class="form-control" value="<?= $account_detail->city; ?>" id="inputcity" name="city" placeholder="Kota">
                         </div>
                     </div>
                     <div class="form-row">

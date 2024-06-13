@@ -67,7 +67,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Add New Client Information - Administrator</title>
+        <title>Add New Client Information</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/dashboard.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
@@ -161,7 +161,7 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
-                            <label for="inputstate">City</label>
+                            <label for="inputstate">Kota</label>
                             <input type="text" name="city" class="form-control" id="inputstate" placeholder="Enter state">
                         </div>
 

@@ -71,7 +71,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Add New User - Administrator</title>
+    <title>Add New User</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
@@ -119,12 +119,12 @@
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="inputFirstname">Firstname:</label>
-                        <input type="text" name="firstname" class="form-control" id="inputFirstname"  placeholder="Enter Firstname">
+                        <label for="inputFirstname">Nama Depan:</label>
+                        <input type="text" name="firstname" class="form-control" id="inputFirstname"  placeholder="Masukan Nama Depan">
                     </div>
                    <div class="form-group col-md-6">
-                        <label for="inputLastname">Lastname:</label>
-                        <input type="text" name="lastname" class="form-control" id="inputLastname"  placeholder="Enter Lastname">
+                        <label for="inputLastname">Nama Belakang:</label>
+                        <input type="text" name="lastname" class="form-control" id="inputLastname"  placeholder="Masukan Nama Belakang">
                     </div>
                    
                 </div>

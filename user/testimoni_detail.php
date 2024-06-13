@@ -181,7 +181,7 @@
                             </button>
                             <a href="" style="color: #22adb5;">Forgot your password?</a>
                             <br/>
-                            <div class="mt-2">Not a member yet? <a href="" style="color: #22adb5;">Join Now</a></div
+                            <div class="mt-2">Not a member yet? <a href="" style="color: #22adb5;">RSVP</a></div
                         </div>
                     </div>
                 </form>

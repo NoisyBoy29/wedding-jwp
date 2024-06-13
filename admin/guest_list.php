@@ -14,7 +14,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Dashboard - Administrator</title>
+    <title>Dashboard</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
     <link href="css/dataTables.bootstrap4.min.css" rel="stylesheet">
@@ -79,7 +79,7 @@
             <th>Fullname</th>
             <th>Guest Name</th>
             <th>Address</th>
-            <th>City</th>
+            <th>Kota</th>
             <th>State</th>
             <th>Zipcode</th>
             <th>Priority-type</th>

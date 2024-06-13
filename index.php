@@ -157,14 +157,14 @@
                     <p class="lead text-center" style="color:white;">Silahkan mengisi form berikut</p>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <input type="text" class="form-control" name="user_firstname" placeholder="First Name" id="user_firstname">
+                                <input type="text" class="form-control" name="user_firstname" placeholder="Nama Depan" id="user_firstname">
                             </div>
                             <div class="form-group col-md-6">
-                                <input type="text" id="user_lastname" class="form-control" name="user_lastname" placeholder="Last Name">
+                                <input type="text" id="user_lastname" class="form-control" name="user_lastname" placeholder="Nama Belakang">
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="user_email" id="user_email" placeholder="youremailaddress@mail.com">
+                            <input type="text" class="form-control" name="user_email" id="user_email" placeholder="Masukan Email">
                         </div>
                         <div class="form-group">
                             <input type="text" aria-describedby="phoneHelpBlock" class="form-control" name="user_phone" id="user_phone" placeholder="Nomor Telepon">
@@ -182,7 +182,7 @@
                         </div>
                         <div class="text-center mt-3">
                             <button type="submit" name="register" class="btn btn-danger btn-sm text-uppercase fb"
-                                    style="margin-top: -5px;">Daftar
+                                    style="margin-top: -5px;">Reservasi
                             </button>
                         </div>
                     </form>
@@ -206,15 +206,15 @@
                     <ul class="list-group list-unstyled">
                         <li class="list-group-item text-center text-uppercase"><?= $category_row->wedding_type; ?></li>
                         <li><img src="admin/<?= $category_row->preview_image_picture(); ?>" class="img-fluid" alt=""></li>
-                        <li class="list-group-item text-center"><b>THIS PACKAGE INCLUDES:</b></li>
+                        <li class="list-group-item text-center"><b>Fitur Paket</b></li>
                         <?php $feature = Features::find_by_feature_all($category_row->id); ?>
                             <?php foreach ($feature as $feature_item) : ?>
                                 <li class="list-group-item"><?= $feature_item->title; ?></li>
                             <?php endforeach; ?>
-                        <li class="list-group-item font-weight-bold">Price: $ <?= number_format($category_row->price); ?>
+                        <li class="list-group-item font-weight-bold">Price: Rp  <?= number_format($category_row->price); ?>
                          </li>
                         <li class="list-group-item font-weight-bold">
-                            <a href="package_detail.php?id=<?= $category_row->id; ?>" class="btn btn-custom">View Details</a>
+                            <a href="package_detail.php?id=<?= $category_row->id; ?>" class="btn btn-custom">Selengkapnya</a>
                         </li>
                     </ul>
                 </div>

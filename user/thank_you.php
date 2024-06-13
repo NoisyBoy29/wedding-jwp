@@ -32,7 +32,7 @@
     <div class="row">
         <div class="col-md-12 mt-5">
                 
-                <h5 class="jumbotron text-center bg-light">THANK YOU FOR BOOKING WITH US. WE ASSURE YOU WE CAN MAKE YOUR WEDDING SUCCESSFUL.</h5>
+                <h5 class="jumbotron text-center bg-light">Terimakasih atas reservasinya,  mohon tunggu informasi dari admin.</h5>
 
         </div>
     </div>
