@@ -11,7 +11,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Articles</title>
+    <title>Testimoni</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -54,10 +54,10 @@
 
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-    <h4 class="h4 mt-4 ml-3">Events And Wedding's Information Section</h4>
+    <h4 class="h4 mt-4 ml-3">Kelola Testimoni Client</h4>
     <div class="btn-toolbar mb-2 mb-md-0">
         <div class="btn-group mr-2">
-            <a class="btn btn-md btn-success" style="font-size: 12px;" href="blog_events_add.php"><i class="mdi mdi-account-plus mr-2"></i> Add New Info.</a>
+            <a class="btn btn-md btn-success" style="font-size: 12px;" href="testimoni_add.php"><i class="mdi mdi-account-plus mr-2"></i> Tambah Testimoni</a>
         </div>
     </div>
 </div>
@@ -72,14 +72,14 @@
 
     <thead>
         <tr>
-            <th>Title</th>
-            <th>Deskripsi</th>
+            <th>Nama Pasangan</th>
+            <th>Testimoni</th>
             <th>Location</th>
             <th>Status</th>
             <th>Tanggal Pernikahan</th>
             <th>Date Created</th>
             <th>Date Published</th>
-            <th>Tools</th>
+            <th>Aksi</th>
         </tr>
     </thead>
   
@@ -101,9 +101,9 @@
             <td class="special"><?= empty($events->date_published) ? 'Unpublished' : $events->date_published; ?></td>
             
             <td>
-                <a href="blog_events_edit.php?id=<?= $events->id; ?>" class="btn btn-info btn-sm active"><i class="mdi mdi-account-edit"></i></a>
-                <a href="blog_events_delete.php?id=<?= $events->id; ?>" class="btn btn-danger btn-sm active"><i class="mdi mdi-delete"></i></a>
-                <a href="../wedding_details.php?id=<?= $events->id; ?>" target="_blank" class="btn btn-warning btn-sm active"><i class="mdi mdi-eye"></i></a>
+                <a href="testimoni_edit.php?id=<?= $events->id; ?>" class="btn btn-info btn-sm active"><i class="mdi mdi-account-edit"></i></a>
+                <a href="testimoni_delete.php?id=<?= $events->id; ?>" class="btn btn-danger btn-sm active"><i class="mdi mdi-delete"></i></a>
+                <a href="../user/wedding_details.php?id=<?= $events->id; ?>" target="_blank" class="btn btn-warning btn-sm active"><i class="mdi mdi-eye"></i></a>
             </td>
 
         </tr>

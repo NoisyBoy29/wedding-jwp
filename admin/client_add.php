@@ -44,7 +44,6 @@
             $phone = clean($_POST['phone']);
             $city = clean($_POST['city']);
             $wedding_type = clean($_POST['wedding_type']);
-            $organizer_id = clean($_POST['organizer_id']);
 
              if (empty($firstname) || empty($lastname) || empty($email) || empty($bride) || empty($groom)) {
                 redirect_to("client_add.php");
@@ -82,7 +81,6 @@
                             $booking_detail->wedding_type = $wedding_type;
                             $booking_detail->user_email = $email;
                             $booking_detail->wedding_date = $wedding_date;
-                            $booking_detail->organizer_id = $organizer_id;
                             $booking_detail->wedding_date =  $wedding_date;
                             
                             $booking_detail->save();
@@ -159,23 +157,23 @@
                             <input type="text" name="firstname" 
                             class="form-control" 
                             id="inputFirstname"  
-                            placeholder="Enter firstname" 
+                            placeholder="Masukan firstname" 
                             value="<?= $firstname;?>">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="">Nama Belakang</label>
-                            <input type="text" name="lastname" class="form-control" id="inputLastname" placeholder="Enter lastname">
+                            <input type="text" name="lastname" class="form-control" id="inputLastname" placeholder="Masukan lastname">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="">Email</label>
-                        <input type="text" name="email" class="form-control" id="inputEmail" placeholder="Enter email">
+                        <input type="text" name="email" class="form-control" id="inputEmail" placeholder="Masukan email">
                     </div>
 
                     <!-- <div class="form-group">
                         <label for="">Password</label>
-                        <input type="password" name="user_password1" class="form-control" id="inputPassword1"  placeholder="Enter email">
+                        <input type="password" name="user_password1" class="form-control" id="inputPassword1"  placeholder="Masukan email">
                     </div>
 
                     <div class="form-group">
@@ -217,11 +215,11 @@
 
                     <div class="form-group">
                         <label for="">Nama Pengantin Wanita</label>
-                        <input type="text" name="bride" class="form-control" value="<?= $booking_detail->bride; ?>" id="brideName" placeholder="Enter Nama Pengantin Wanita">
+                        <input type="text" name="bride" class="form-control" value="<?= $booking_detail->bride; ?>" id="brideName" placeholder="Masukan Nama Pengantin Wanita">
                     </div>
                     <div class="form-group">
                         <label for="">Nama Pengantin Pria</label>
-                        <input type="text" name="groom" class="form-control" value="<?= $booking_detail->groom; ?>" id="GroomsName" placeholder="Enter Nama Pengantin Pria">
+                        <input type="text" name="groom" class="form-control" value="<?= $booking_detail->groom; ?>" id="GroomsName" placeholder="Masukan Nama Pengantin Pria">
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
@@ -233,17 +231,7 @@
                             <input type="text" class="form-control" value="<?= $account_detail->city; ?>" id="inputcity" name="city" placeholder="Kota">
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="">Assigned Organizer</label>
-                            <select class="form-control" id="inputOrganizer" name="organizer_id">
-                                <option value="1">Big Day Planners</option>
-                                <option value="2">Joyful Events</option>
-                                <option value="3">Roses and Co</option>
-                            </select>
-                        </div><!-- form-group col-md-6 -->
-                    </div><!-- end of form-row -->
-                </form><!-- end of input form -->
+                </form>
             </div>
         </div>
     </div>

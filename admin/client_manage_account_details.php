@@ -13,8 +13,6 @@
      $category_details = Category::find_by_id($booking->wedding_type);
      $features_details = Features::find_by_feature_all_a($category_details->id);
 
-     $cash = Liquidation::getTotalAmountCash($booking_id);
-
      $bdd = new PDO('mysql:host=localhost;dbname=dbwedding', 'root', '');
     $sql = "SELECT id, title, location, start, end, color FROM events WHERE booking_id = {$_GET['booking_id']}";
     $req = $bdd->prepare($sql);
@@ -87,7 +85,7 @@
 
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-    <h6 class="h6 mt-4 text-uppercase">OVERVIEW of <?= @ucfirst($category_details->wedding_type == 0) ? $category_details->wedding_type . " Package Wedding" : 'No Package Selected'; ?> </h6>
+    <h6 class="h6 mt-4 text-uppercase">OVERVIEW</h6>
 
     <div class="btn-toolbar mb-2 mb-md-0">
         <div class="btn-group mr-2">
@@ -96,9 +94,6 @@
 
             <a class="btn btn-sm btn-info mr-2 " style="font-size: 12px;" href="guest_list.php?<?= $links; ?>"><i class="mdi mdi-account-network mr-2"></i> Master List Guest</a>
 
-            <a class="btn btn-sm btn-success mr-2 " style="font-size: 12px;" href="budget.php?<?= $links; ?>"><i class="mdi mdi-currency-usd mr-2"></i> Budget</a>
-
-            <a class="btn btn-sm btn-warning mr-2 " style="font-size: 12px;" href="task_calendar.php?<?= $links; ?>"><i class="mdi mdi-calendar-text mr-2"></i> Task Calendar</a>
         </div>
     </div>
 </div>
@@ -116,53 +111,17 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-3">
-                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                    <!-- <div class="card-header">Amount Paid To Date</div> -->
-                    <div class="card-header">Amount Paid To Date</div>
-                    <div class="card-body">
-                        <h5 class="card-title">$ <?= number_format($cash,2); ?></h5>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                    <div class="card-header"> Amount Paid</div>
-                    <div class="card-body">
-                        <h5 class="card-title">$ <?= number_format($account_details->cash_advanced, 2); ?></h5>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Balance Due</div>
-                    <div class="card-body">
-                        <h5 class="card-title">$ <?= @number_format($category_details->price - $account_details->cash_advanced, 2); ?></h5>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
 <div class="row">
     <div class="col-md-12 mb-3">
         <ul class="list-group">
-            <li class="list-group-item active bg-danger">Package Include:</li>
+            <li class="list-group-item active bg-danger">Fitur Paket:</li>
             <?php foreach ($features_details as $feature_item) : ?>
                 <li class="list-group-item"><i class="mdi mdi-checkbox-marked mr-2" style="font-size: 16px;"></i><?= $feature_item->title; ?></li>
             <?php endforeach; ?>
         </ul> 
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-12">
-        <div id="calendar"></div>
     </div>
 </div>
 </main>

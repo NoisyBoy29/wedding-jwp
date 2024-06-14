@@ -12,21 +12,18 @@
                     <a class="nav-link" href="../index.php">Beranda <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="/wedding-jwp/user/pricing.php">Daftar Harga</a>
+                <a class="nav-link" href="/wedding-jwp/user/package.php">Daftar Harga</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="/wedding-jwp/user/testimoni.php">Testimoni</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="/wedding-jwp/user/gallery.php">Galeri</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="/wedding-jwp/user/tentang_kami.php">Kontak Kami</a>
+                <a class="nav-link" href="/wedding-jwp/user/Kontak.php">Kontak Kami</a>
                 </li>
             </ul>
             <div class="form-inline mr-2">
                 <a class="btn btn-sm my-2 my-sm-0 loginbtn" href="/wedding-jwp/admin/login.php">Admin Login</a>
-                <a class="btn btn-sm my-2 my-sm-0 mr-2 loginbtn" href="/wedding-jwp/user/sign_up.php">RSVP</a>
+                <a class="btn btn-sm my-2 my-sm-0 mr-2 loginbtn" href="/wedding-jwp/user/rsvp.php">RSVP</a>
             </div>
         </div>
     </div>

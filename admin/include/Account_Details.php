@@ -14,7 +14,6 @@ class Account_Details extends DB_Object
         'description',
         'location',
         'expectation_visitor',
-        'cash_advanced',
         'status',
         'date_signed'
     );
@@ -28,11 +27,9 @@ class Account_Details extends DB_Object
     public $datetime_created;
     public $description;
     public $location;
-    public $cash_advanced;
     public $status;
     public $expectation_visitor;
     public $date_signed;
-    public $organizer_id;
 
 
     public static function count_user() {

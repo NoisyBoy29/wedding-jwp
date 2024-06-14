@@ -21,7 +21,7 @@ if (isset($_POST['register'])) {
     $checkdate = $booking->check_wedding_date($wedding_date);
 
     if ($checkdate) {
-        redirect_to("../user/sign_up.php");
+        redirect_to("../user/rsvp.php");
         $session->message("
             <div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
               <strong><i class='mdi mdi-alert'></i></strong>  The wedding you enter is already booked. Please Try another set of date!
@@ -37,7 +37,7 @@ if (isset($_POST['register'])) {
         empty($user_email) ||
         empty($user_lastname) ||
         empty($wedding_date)) {
-        redirect_to("../user/sign_up.php");
+        redirect_to("../user/rsvp.php");
         $session->message("
             <div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
               <strong><i class='mdi mdi-alert'></i></strong>  Please Fill up all the fields.
@@ -49,7 +49,7 @@ if (isset($_POST['register'])) {
     }
 
     if (!filter_var($user_email, FILTER_VALIDATE_EMAIL)){
-        redirect_to("../user/sign_up.php");
+        redirect_to("../user/rsvp.php");
         $session->message("
             <div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
               <strong><i class='mdi mdi-alert'></i></strong>  Incorrect email format.
@@ -64,7 +64,7 @@ if (isset($_POST['register'])) {
     $check_email = $accounts->email_exists($user_email);
 
     if ($check_email) {
-        redirect_to("../user/sign_up.php");
+        redirect_to("../user/rsvp.php");
         $session->message("
             <div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
               <strong><i class='mdi mdi-alert'></i></strong>  Email is already Exists.
@@ -238,7 +238,7 @@ if (isset($_POST['register'])) {
             font-size: 12px;
         }
 
-        .pricing {
+        .package {
             width: 18%;
             min-height: 200px;
             float: left;

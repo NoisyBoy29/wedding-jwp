@@ -11,7 +11,6 @@ class Booking extends DB_Object
         'wedding_type',
         'user_email',
         'wedding_date',
-        'organizer_id'
     );
 
     public $booking_id;
@@ -24,7 +23,6 @@ class Booking extends DB_Object
     public $user_email;
     public $wedding_type;
     public $phone;
-    public $organizer_id;
 
      public function check_wedding_date($date) {
         global $db;

@@ -29,7 +29,7 @@
         redirect_to("service_list.php");
         $session->message("
             <div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-              <strong><i class='mdi mdi-check'></i></strong> {$category->wedding_type} is successfully added.
+              <strong><i class='mdi mdi-check'></i></strong> {$category->wedding_type} Berhasil ditambahkan
               <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                 <span aria-hidden=\"true\">&times;</span>
               </button>
@@ -104,7 +104,7 @@
                      <a href="service_list.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;">Batal</a>
 
                         <button type="submit" name="submit" class="btn btn-sm btn-success float-right mr-2" style="font-size: 12px;">Simpan</button>
-                </form><!-- end of input form -->
+                </form>
             </div>
         </div>
     </div>

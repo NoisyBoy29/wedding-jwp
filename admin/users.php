@@ -57,10 +57,10 @@
 
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-    <h4 class="h4 mt-4 ml-3">User Management</h4>
+    <h4 class="h4 mt-4 ml-3">Kelola Akun Admin</h4>
     <div class="btn-toolbar mb-2 mb-md-0">
         <div class="btn-group mr-2">
-            <a class="btn btn-md btn-success" style="font-size: 12px;" href="users_add.php"><i class="mdi mdi-account-plus mr-2"></i> Add New User</a>
+            <a class="btn btn-md btn-success" style="font-size: 12px;" href="users_add.php"><i class="mdi mdi-account-plus mr-2"></i> Tambah Akun Admin</a>
         </div>
     </div>
 </div>
@@ -73,14 +73,13 @@
 
     <thead>
         <tr>
-            <th>Photo</th>
-            <th>Fullname</th>
+            <th>Foto</th>
+            <th>Nama</th>
             <th>Email</th>
             <th>Username</th>
-            <th>Designation</th>
-            <th>Address</th>
+            <th>Role</th>
             <th>Date Created</th>
-            <th>Actions</th>
+            <th>Aksi</th>
         </tr>
     </thead>
     

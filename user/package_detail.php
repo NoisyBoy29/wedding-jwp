@@ -223,7 +223,7 @@
                 <ul class="list-group">
                         <li class="list-group-item list-group-item-action bg-danger flex-column align-items-start active">
                             <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1 pt-2 pb-2">FUNCTIONS AND SERVICES</h5>
+                                <h5 class="mb-1 pt-2 pb-2">Fitur dan layanan</h5>
                             </div>
                         </li>
                     <?php $feature = Features::find_by_feature_no_limit($category->id); ?>

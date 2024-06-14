@@ -7,29 +7,21 @@ class Guest extends DB_Object
         'id',
         'booking_id',
         'fullname',
-        'guestname',
         'address',
-        'state',
-        'zipcode',
         'priority',
-        'out_of_town',
         'relationship',
-        'tracks_and_gifts',
+        'message',
         'city'
     );
 
     public $id;
     public $booking_id;
     public $fullname;
-    public $guestname;
     public $address;
-    public $state;
-    public $zipcode;
-    public $priority;
-    public $out_of_town;
-    public $relationship;
-    public $tracks_and_gifts;
     public $city;
+    public $priority;
+    public $relationship;
+    public $message;
 
     public static function getGuest($booking_id) {
         global $db;

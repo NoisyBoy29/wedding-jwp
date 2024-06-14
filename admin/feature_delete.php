@@ -14,7 +14,7 @@ $features = Features::find_by_feature_id($_GET['id']);
 
 if($features) {
 	$session->message("<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-              <strong><i class='mdi mdi-account-alert'></i></strong> The features {$features->title}  has been deleted.
+              <strong><i class='mdi mdi-account-alert'></i></strong> The features {$features->title}  Dihapus.
               <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                 <span aria-hidden=\"true\">&times;</span>
               </button>

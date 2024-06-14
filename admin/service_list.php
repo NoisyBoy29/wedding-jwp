@@ -16,7 +16,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Services And Modules</title>
+    <title>Paket & Pelayanan</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
     <link href="css/dataTables.bootstrap4.min.css" rel="stylesheet">
@@ -72,9 +72,9 @@
 
                 <thead>
                     <tr>
-                        <th>Wedding Category</th>
+                        <th>Paket</th>
                         <th>Price</th>
-                        <th>Actions</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
               
@@ -100,7 +100,7 @@
                 <?php endforeach; ?>
                 </tbody>
             </table>
-        </div><!-- end of col-md-12 -->
+        </div>
 
         <div class="col-md-12 mt-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
@@ -118,7 +118,7 @@
                         <th>Paket Pernikahan</th>
                         <th>Title</th>
                         <th>Deskripsi</th>
-                        <th>Actions</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
              
@@ -141,7 +141,7 @@
                 <?php endforeach; ?>
                 </tbody>
             </table>
-        </div><!-- end of col-md-12 -->
+        </div>
 
 
 
@@ -175,7 +175,7 @@
       <div class="modal-dialog modal-lg modal-dialog-centered" role="document">  
            <div class="modal-content">  
                 <div class="modal-header">  
-                    <h4 class="modal-title">Package Features Details</h4>  
+                    <h4 class="modal-title">Detail Fitur</h4>  
                     <button type="button" class="close" data-dismiss="modal">&times;</button>  
                 </div>  
                 <div class="modal-body" id="package_detail">  

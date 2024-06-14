@@ -22,11 +22,9 @@
             $phone = clean($_POST['phone']);
             $city = clean($_POST['city']);
             $wedding_type = clean($_POST['wedding_type']);
-            $organizer_id = clean($_POST['organizer_id']);
             $description = clean($_POST['description']);
             $location = clean($_POST['location']);
             $expectation_visitor = clean($_POST['expectation_visitor']);
-            $cash_advanced = clean($_POST['cash_advanced']);
             $status = "confirm";
 
             $booking_detail->bride = $bride;
@@ -34,7 +32,6 @@
             $booking_detail->wedding_type = $wedding_type;
             $accounts->user_email = $booking_detail->user_email = $email;
             $booking_detail->wedding_date = $wedding_date;
-            $booking_detail->organizer_id = $organizer_id;
             $booking_detail->update_booking($booking_id);
             $booking_detail->save_booking();
 
@@ -43,7 +40,7 @@
             $account_detail->phone = $phone;
             $account_detail->city = $city;
             $account_detail->expectation_visitor = $expectation_visitor;
-            $account_detail->cash_advanced = $cash_advanced;
+
             $account_detail->status = $status;
             $account_detail->location = $location;
             $account_detail->description = $description;
@@ -57,7 +54,7 @@
 
             $session->message("
             <div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-              <strong><i class='mdi mdi-approval'></i></strong> {$account_detail->firstname} {$account_detail->lastname} has been successfully modify.
+              <strong><i class='mdi mdi-approval'></i></strong> {$account_detail->firstname} {$account_detail->lastname} Berhasil diubah.
               <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                 <span aria-hidden=\"true\">&times;</span>
               </button>
@@ -75,7 +72,7 @@
             redirect_to("client.php");
             $session->message("
             <div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-              <strong><i class='mdi mdi-approval'></i></strong> {$account_detail->firstname} {$account_detail->lastname} has been successfully updated.
+              <strong><i class='mdi mdi-approval'></i></strong> {$account_detail->firstname} {$account_detail->lastname} has been Berhasil diubah.
               <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                 <span aria-hidden=\"true\">&times;</span>
               </button>
@@ -93,7 +90,7 @@ if (isset($_POST['fraud'])) {
         redirect_to("client.php");
         $session->message("
             <div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-              <strong><i class='mdi mdi-approval'></i></strong> {$account_detail->firstname} {$account_detail->lastname} has been successfully updated.
+              <strong><i class='mdi mdi-approval'></i></strong> {$account_detail->firstname} {$account_detail->lastname} has been Berhasil diubah.
               <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                 <span aria-hidden=\"true\">&times;</span>
               </button>
@@ -108,7 +105,7 @@ if (isset($_POST['fraud'])) {
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Edit Client Information</title>
+        <title>Edit data client</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/dashboard.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
@@ -153,19 +150,19 @@ if (isset($_POST['fraud'])) {
 
                         <div class="form-group col-md-6">
                             <label for="inputFirstname">Nama Depan</label>
-                            <input type="text" name="firstname" class="form-control" id="inputFirstname" value="<?= $account_detail->firstname; ?>" placeholder="Enter firstname">
+                            <input type="text" name="firstname" class="form-control" id="inputFirstname" value="<?= $account_detail->firstname; ?>" placeholder="Masukan firstname">
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="inputLastname">Nama Belakang</label>
-                            <input type="text" name="lastname" class="form-control" id="inputLastname" value="<?= $account_detail->lastname; ?>" placeholder="Enter lastname">
+                            <input type="text" name="lastname" class="form-control" id="inputLastname" value="<?= $account_detail->lastname; ?>" placeholder="Masukan lastname">
                         </div>
 
                     </div>
 
                     <div class="form-group">
                         <label for="inputEmail">Email</label>
-                        <input type="text" name="email" class="form-control" id="inputEmail" value="<?= $booking_detail->user_email; ?>" placeholder="Enter email">
+                        <input type="text" name="email" class="form-control" id="inputEmail" value="<?= $booking_detail->user_email; ?>" placeholder="Masukan email">
                     </div>
 
                     <div class="form-row form-group">
@@ -214,14 +211,14 @@ if (isset($_POST['fraud'])) {
                     <div class="form-group">
 
                         <label for="brideName">Nama Pengantin Wanita</label>
-                        <input type="text" name="bride" class="form-control" value="<?= $booking_detail->bride; ?>" id="brideName" placeholder="Enter Nama Pengantin Wanita">
+                        <input type="text" name="bride" class="form-control" value="<?= $booking_detail->bride; ?>" id="brideName" placeholder="Masukan Nama Pengantin Wanita">
 
                     </div>
 
                     <div class="form-group">
 
                         <label for="GroomsName">Nama Pengantin Pria</label>
-                        <input type="text" name="groom" class="form-control" value="<?= $booking_detail->groom; ?>" id="GroomsName" placeholder="Enter Nama Pengantin Pria">
+                        <input type="text" name="groom" class="form-control" value="<?= $booking_detail->groom; ?>" id="GroomsName" placeholder="Masukan Nama Pengantin Pria">
 
                     </div>
                     <div class="form-row">
@@ -238,38 +235,22 @@ if (isset($_POST['fraud'])) {
 
                     </div>
 
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputOrganizer">Assigned Organizer</label>
-                            <select class="form-control" id="inputOrganizer" name="organizer_id">
-                                <option value="1">Big Day Planners</option>
-                                <option value="2">Joyful Events</option>
-                                <option value="3">Roses and Co</option>
-                            </select>
-                        </div><!-- form-group col-md-6 -->
-                    </div><!-- end of form-row -->
-
 					<div class="form-row">
 						<div class="col form-group">
-	                        <label for="inputLocation">Wedding Location</label>
-	                        <input type="text" name="location" value="<?= $account_detail->location; ?>" class="form-control" value="" id="inputLocation" placeholder="Enter location">
+	                        <label for="inputLocation">Lokasi Pernikahan</label>
+	                        <input type="text" name="location" value="<?= $account_detail->location; ?>" class="form-control" value="" id="inputLocation" placeholder="Masukan lokasi">
 	                    </div>
 
 	                    <div class="col form-group">
-	                        <label for="Inputexpectation_visitor">Expected Visitor</label>
-	                        <input type="text" name="expectation_visitor" value="<?= $account_detail->expectation_visitor; ?>" class="form-control" value="" id="Inputexpectation_visitor" placeholder="Enter expected visitor">
-                    	</div>
-                    	
-                    	<div class="col form-group">
-	                        <label for="inputcash_advanced">Cash Advanced</label>
-	                        <input type="text" name="cash_advanced" class="form-control" value="<?= $account_detail->cash_advanced; ?>" id="inputcash_advanced" placeholder="Enter cash advanced">
+	                        <label for="Inputexpectation_visitor">Perkiraan tamu undangan</label>
+	                        <input type="text" name="expectation_visitor" value="<?= $account_detail->expectation_visitor; ?>" class="form-control" value="" id="Inputexpectation_visitor" placeholder="Masukan perkiraan tamu undangan">
                     	</div>
 
                     </div>
 
 					<div class="form-group">
                         <label for="Inputdescription">Deskripsi</label>
-                        <textarea name="description" class="form-control" id="Inputdescription" placeholder="Enter expected visitor" rows="5"><?= $account_detail->description; ?></textarea>
+                        <textarea name="description" class="form-control" id="Inputdescription" placeholder="Masukan expected visitor" rows="5"><?= $account_detail->description; ?></textarea>
                     </div>
 
                
@@ -283,7 +264,7 @@ if (isset($_POST['fraud'])) {
                     	<i class="mdi mdi-check mr-2"></i> Confirm Booking
                     </button>
 
-                </form><!-- end of input form -->
+                </form>
             </div>
         </div>
     </div>

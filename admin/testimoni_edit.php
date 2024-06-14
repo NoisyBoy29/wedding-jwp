@@ -15,7 +15,7 @@ $category = Category::find_all();
             $wedding_type       = clean($_POST['wedding_type']);
             
             if (empty($title) || empty($description) || empty($wedding_date) || empty($location)) {
-                redirect_to("blog_events_edit.php?id=".$_GET['id']);
+                redirect_to("testimoni_edit.php?id=".$_GET['id']);
                 $session->message("
                 <div class=\"alert alert-danger alert-dismissible fade show\" role=\"alert\">
                   <strong><i class='mdi mdi-account-alert mr-2'></i></strong> Please Fill up all the information.
@@ -41,10 +41,10 @@ $category = Category::find_all();
 
             if(empty($_FILES['preview_image'])){
                 $event_wedding->save();
-                redirect_to("blog_events.php");
+                redirect_to("testimoni.php");
                 $session->message("
                 <div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-                  <strong><i class='mdi mdi-account-alert mr-2'></i></strong> The {$event_wedding->title} has been updated.
+                  <strong><i class='mdi mdi-account-alert mr-2'></i></strong> Testimoni {$event_wedding->title} berhasil diubah.
                   <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                     <span aria-hidden=\"true\">&times;</span>
                   </button>
@@ -55,12 +55,12 @@ $category = Category::find_all();
                 $event_wedding->save();
                 $session->message("
                 <div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-                  <strong><i class='mdi mdi-account-alert mr-2'></i></strong> The {$event_wedding->title} has been updated.
+                  <strong><i class='mdi mdi-account-alert mr-2'></i></strong> testimoni {$event_wedding->title} berhasil diubah.
                   <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                     <span aria-hidden=\"true\">&times;</span>
                   </button>
                 </div>");
-                redirect_to("blog_events.php");
+                redirect_to("testimoni.php");
             }
         }
     }
@@ -71,7 +71,7 @@ $category = Category::find_all();
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Edit Article</title>
+        <title>Edit Testimoni</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/dashboard.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
@@ -106,11 +106,11 @@ $category = Category::find_all();
                
                 <form action="" method="post" enctype="multipart/form-data">
 
-                    <h4 class="h4 mt-4 pb-2" style="border-bottom: 1px solid #dee2e6!important;">Edit Article 
+                    <h4 class="h4 mt-4 pb-2" style="border-bottom: 1px solid #dee2e6!important;">Edit testimoni 
 
-                        <a href="blog_events.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;"><i class="mdi mdi-close-circle mr-2"></i> Batal</a>
+                        <a href="testimoni.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;"><i class="mdi mdi-close-circle mr-2"></i> Batal</a>
 
-                        <button type="submit" name="submit" class="btn btn-sm btn-success float-right mr-2" style="font-size: 12px;"><i class="mdi mdi-account-plus mr-2"></i> Edit article</button>
+                        <button type="submit" name="submit" class="btn btn-sm btn-success float-right mr-2" style="font-size: 12px;"><i class="mdi mdi-account-plus mr-2"></i> Edit testimoni</button>
 
                     </h4>
                         <?php
@@ -144,12 +144,12 @@ $category = Category::find_all();
                             <input type="text" name="title" 
                             class="form-control" value="<?= $event_wedding->title; ?>" 
                             id="title"  
-                            placeholder="Enter title">
+                            placeholder="Masukan title">
                         </div>
 
                     <div class="form-group">
                         <label for="description">Deskripsi:</label>
-                        <textarea name="description" id="description" cols="30" rows="10" class="form-control" placeholder="Enter description and vendor of this wedding"><?= $event_wedding->description; ?></textarea>
+                        <textarea name="description" id="description" cols="30" rows="10" class="form-control" placeholder="Masukan testimoni"><?= $event_wedding->description; ?></textarea>
                     </div>
 
                     <div class="form-row">
@@ -177,7 +177,7 @@ $category = Category::find_all();
 
                     <div class="form-group">
                         <label for="location">Location</label>
-                        <input type="text" name="location" class="form-control" value="<?= $event_wedding->location; ?>" id="location" placeholder="Enter Nama Pengantin Wanita">
+                        <input type="text" name="location" class="form-control" value="<?= $event_wedding->location; ?>" id="location" placeholder="Masukan Lokasi Pernikahan">
                     </div>
 
                     <div class="form-group">
@@ -193,7 +193,7 @@ $category = Category::find_all();
                         </select>
                     </div>
 
-                </form><!-- end of input form -->
+                </form>
             </div>
              <div class="col-lg-3 mt-4">
                 <img id="preview_image" src="<?= $event_wedding->preview_image_picture(); ?>" width="300" height="350" alt="">

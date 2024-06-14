@@ -77,7 +77,7 @@
             <th>Yes</th>
             <th>No</th>
             <th>Has Not Responded</th>
-            <th>Tools</th>
+            <th>Aksi</th>
         </tr>
     </thead>
 

@@ -57,7 +57,7 @@
             redirect_to("users.php");
             $session->message("
             <div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-              <strong><i class='mdi mdi-check'></i></strong> {$users->firstname} {$users->lastname}  is successfully added.
+              <strong><i class='mdi mdi-check'></i></strong> {$users->firstname} {$users->lastname}  Berhasil ditambahkan
               <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                 <span aria-hidden=\"true\">&times;</span>
               </button>
@@ -105,7 +105,7 @@
         
             <form method="post" action="" enctype="multipart/form-data">
 
-                <h4 class="h4 mt-4 pb-2" style="border-bottom: 1px solid #dee2e6!important;">New User Information
+                <h4 class="h4 mt-4 pb-2" style="border-bottom: 1px solid #dee2e6!important;">Tambah Akun Admin
                     <a href="users.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;"><i class="mdi mdi-close-circle mr-2"></i> Batal</a>
 
                     <button type="submit" name="submit" class="btn btn-sm btn-success float-right mr-2" style="font-size: 12px;"><i class="mdi mdi-account-plus mr-2"></i> Simpan User</button>
@@ -131,17 +131,17 @@
                 
                 <div class="form-group">
                     <label for="inputEmail">Email:</label>
-                    <input type="text" name="email" class="form-control" id="inputEmail" placeholder="Enter Email">
+                    <input type="text" name="email" class="form-control" id="inputEmail" placeholder="Masukan Email">
                 </div>
 
                 <div class="form-group">
                     <label for="inputUsername">Username:</label>
-                    <input type="text" name="username" class="form-control" id="inputUsername" placeholder="Enter Username">
+                    <input type="text" name="username" class="form-control" id="inputUsername" placeholder="Masukan Username">
                 </div>
 
                 <div class="form-group">
                     <label for="inputpassword">Password:</label>
-                    <input type="password" name="password" class="form-control" id="inputpassword" placeholder="Enter Password">
+                    <input type="password" name="password" class="form-control" id="inputpassword" placeholder="Masukan Password">
                 </div>
 
                 <div class="form-group">
@@ -149,32 +149,17 @@
                     <input type="password" name="password2" class="form-control" id="inputpasswordConfirm" placeholder="Confirm password">
                 </div>
 
-
                  <div class="form-group">
-                        <label for="gender">Gender:</label>
-                        <select name="gender" class="custom-select" id="gender">
-                            <option value="m">Male</option>
-                            <option value="f">Female</option>
-                        </select>
-                    </div>
-
-                <div class="form-group">
-                    <label for="inputAddress">Address</label>
-                    <textarea rows="5" name="address" class="form-control" id="inputAddress"  placeholder="Enter Address"></textarea>
-                </div>
-
-                 <div class="form-group">
-                    <label for="designation">Designation:</label>
+                    <label for="designation">Role:</label>
                     <select name="designation" id="designation" class="custom-select">
                         <option value="0">Administrator</option>
-                        <option value="1">Moderator</option>
                     </select>
                 </div>
                   <div class="form-group">
                     <label for="inputProfilePicture">Profile Image</label>
                     <input type="file" name="profile_picture" class="form-control-file" id="inputProfilePicture">
                   </div>
-            </form><!-- end of input form -->
+            </form>
         </div>
     </div>
 </div>

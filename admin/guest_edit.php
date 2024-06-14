@@ -38,20 +38,16 @@
 
         if ($guest_query) {
             $guest_query->fullname = $fullname;
-            $guest_query->guestname = $guestname;
             $guest_query->address = $address;
             $guest_query->city = $city;
-            $guest_query->state = $state;
-            $guest_query->zipcode = $zipcode;
             $guest_query->priority = $priority;
-            $guest_query->out_of_town = $out_of_town;
             $guest_query->relationship = $relationship;
-            $guest_query->tracks_and_gifts = $gifts;
+            $guest_query->message = $gifts;
             $guest_query->update();
             redirect_to("guest_list.php?$links");
             $session->message("
                 <div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-                  <strong><i class='mdi mdi-check'></i></strong> {$guest_query->fullname} is successfully updated.
+                  <strong><i class='mdi mdi-check'></i></strong> {$guest_query->fullname} is Berhasil diubah.
                   <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                     <span aria-hidden=\"true\">&times;</span>
                   </button>
@@ -115,14 +111,14 @@
 
                     <div class="form-group">
                         <label for="inputfullname">Fullname</label>
-                        <input type="text" name="fullname" class="form-control" id="inputfullname"  placeholder="Enter fullname" value="<?= $guest_query->fullname; ?>">
+                        <input type="text" name="fullname" class="form-control" id="inputfullname"  placeholder="Masukan fullname" value="<?= $guest_query->fullname; ?>">
                        
                     </div>
 
 
                     <div class="form-group">
                         <label for="inputGuestname">Guest Name</label>
-                        <input type="text" name="guestname" class="form-control" id="inputGuestname" placeholder="Enter guestname" value="<?= $guest_query->guestname; ?>">
+                        <input type="text" name="guestname" class="form-control" id="inputGuestname" placeholder="Masukan guestname" value="<?= $guest_query->guestname; ?>">
                     </div>
 
                      <div class="form-group">
@@ -130,11 +126,11 @@
                             <select name="relationship" class="form-control" id="relationship">
                                 <?php 
                                     if ($guest_query->relationship == 'b') {
-                                        echo '<option value="b" selected>Bride</option>';
-                                        echo '<option value="g">Groom</option>';
+                                        echo '<option value="b" selected>Pengantin Wanita</option>';
+                                        echo '<option value="g">Pengantin Pria</option>';
                                     } else {
-                                        echo '<option value="b">Bride</option>';
-                                        echo '<option value="g" selected>Groom</option>';
+                                        echo '<option value="b">Pengantin Wanita</option>';
+                                        echo '<option value="g" selected>Pengantin Pria</option>';
                                     }
                                 ?>
                             </select>
@@ -142,7 +138,7 @@
 
                     <div class="form-group">
                         <label for="inputAddress">Address</label>
-                        <textarea rows="5" name="address" class="form-control" id="inputAddress"  placeholder="Enter address"><?= $guest_query->address; ?></textarea>
+                        <textarea rows="5" name="address" class="form-control" id="inputAddress"  placeholder="Masukan address"><?= $guest_query->address; ?></textarea>
                     </div>
 
                     <div class="form-row">
@@ -207,18 +203,18 @@
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="inputstate">Kota</label>
-                            <input value="<?= $guest_query->city; ?>" type="text" name="city" class="form-control" id="inputstate" placeholder="Enter state">
+                            <input value="<?= $guest_query->city; ?>" type="text" name="city" class="form-control" id="inputstate" placeholder="Masukan state">
                         </div>
 
                         <div class="form-group col-md-4">
                             <label for="inputstate">State</label>
-                            <input type="text" name="state" class="form-control" id="inputstate" placeholder="Enter state" value="<?= $guest_query->state; ?>">
+                            <input type="text" name="state" class="form-control" id="inputstate" placeholder="Masukan state" value="<?= $guest_query->state; ?>">
                         </div>
 
 
                         <div class="form-group col-md-4">
                             <label for="inputZipcode">Zipcode</label>
-                            <input type="text" name="zipcode" class="form-control" id="inputZipcode" placeholder="Enter zipcode" value="<?= $guest_query->zipcode; ?>">
+                            <input type="text" name="zipcode" class="form-control" id="inputZipcode" placeholder="Masukan zipcode" value="<?= $guest_query->zipcode; ?>">
                         </div>
 
                        
@@ -227,10 +223,10 @@
 
                     <div class="form-group">
                         <label for="inputgift">Track Gifts &amp; Thank you's</label>
-                        <textarea rows="5" name="gifts" class="form-control" id="inputgift"  placeholder="Enter address"><?= $guest_query->tracks_and_gifts; ?></textarea>
+                        <textarea rows="5" name="gifts" class="form-control" id="inputgift"  placeholder="Masukan address"><?= $guest_query->message; ?></textarea>
                     </div>
 
-                </form><!-- end of input form -->
+                </form>
             </div>
         </div>
     </div>

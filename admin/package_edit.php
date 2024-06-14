@@ -30,7 +30,7 @@
                 redirect_to("service_list.php");
                 $session->message("
                     <div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-                      <strong><i class='mdi mdi-check'></i></strong>The {$category->wedding_type} is successfully Updated.
+                      <strong><i class='mdi mdi-check'></i></strong>The {$category->wedding_type} is Berhasil diubah.
                       <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                         <span aria-hidden=\"true\">&times;</span>
                       </button>
@@ -44,7 +44,7 @@
               // redirect_to("edit_user.php?id={$room->id}");
               $session->message("
                 <div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-                  <strong><i class='mdi mdi-check'></i></strong>The {$category->title} is successfully updated.
+                  <strong><i class='mdi mdi-check'></i></strong>The {$category->title} is Berhasil diubah.
                   <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                     <span aria-hidden=\"true\">&times;</span>
                   </button>
@@ -127,7 +127,7 @@
             <div class="col-lg-4 mt-4">
                 <img src="<?= $category->preview_image_picture(); ?>" width="380" height="306"  alt="">
             </div>
-             </form><!-- end of input form -->
+             </form>
         </div>
     </div>
 

@@ -41,16 +41,13 @@
                     <a class="nav-link" href="index.php">Beranda <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="user/pricing.php">Daftar Harga</a>
+                    <a class="nav-link" href="user/package.php">Daftar Harga</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="user/testimoni.php">Testimoni</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="user/gallery.php">Galeri</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="user/tentang_kami.php">Kontak Kami</a>
+                    <a class="nav-link" href="user/Kontak.php">Kontak Kami</a>
                 </li>
             </ul>
             <div class="form-inline mr-2">
@@ -59,7 +56,7 @@
                 <a class="btn btn-sm my-2 my-sm-0" data-toggle="modal" data-target="#loginModal">
                     Login
                 </a>
-                <a class="btn btn-sm my-2 my-sm-0 mr-2 loginbtn" href="sign_up.php">Join</a>
+                <a class="btn btn-sm my-2 my-sm-0 mr-2 loginbtn" href="rsvp.php">Join</a>
             </div>
         </div>
     </div>
@@ -164,13 +161,13 @@
                         <label for="inputEmail" class="col-sm-2 col-form-label">Email:</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="inputEmail" name="email"
-                                   placeholder="Enter email">
+                                   placeholder="Masukan email">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputPassword" class="col-sm-2 col-form-label">Password:</label>
                         <div class="col-sm-10">
-                            <input type="password" class="form-control" id="inputPassword" placeholder="Enter password">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Masukan password">
                         </div>
                     </div>
                     <div class="form-group row">

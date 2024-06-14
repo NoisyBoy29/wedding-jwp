@@ -7,12 +7,10 @@ class Users extends DB_Object
         'id',
         'firstname',
         'lastname',
-        'gender',
         'username',
         'password',
         'email',
         'designation',
-        'address',
         'access_level',
         'profile_picture',
         'date_created'
@@ -21,13 +19,11 @@ class Users extends DB_Object
     public $id;
     public $firstname;
     public $lastname;
-    public $gender;
     public $username;
     public $password;
     public $email;
     public $designation;
     public $access_level;
-    public $address;
     public $profile_picture;
     public $date_created;
 

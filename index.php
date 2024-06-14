@@ -94,7 +94,7 @@
                              $booking->user_email = $user_email;
                              $booking->wedding_date =  $wedding_date;
                              $booking->save();
-                             redirect_to("thank_you.php");
+                             redirect_to("user/thank_you.php");
                          }
                     }
                 }
@@ -197,12 +197,11 @@
 <div class="container-fluid custom-container">
     <div class="row">
         <div class="col-lg-12">
-            <!-- <h3 class="h5 text-uppercase text-center text-muted mt-4">Wedding</h3> -->
             <hr>
             <h2 class="h2 text-uppercase text-center mb-4">Daftar Paket Pernikahan</h2>
 
             <?php foreach ($category as $category_row) : ?>
-                <div class="pricing">
+                <div class="package">
                     <ul class="list-group list-unstyled">
                         <li class="list-group-item text-center text-uppercase"><?= $category_row->wedding_type; ?></li>
                         <li><img src="admin/<?= $category_row->preview_image_picture(); ?>" class="img-fluid" alt=""></li>
@@ -214,7 +213,7 @@
                         <li class="list-group-item font-weight-bold">Price: Rp  <?= number_format($category_row->price); ?>
                          </li>
                         <li class="list-group-item font-weight-bold">
-                            <a href="package_detail.php?id=<?= $category_row->id; ?>" class="btn btn-custom">Selengkapnya</a>
+                            <a href="user/package_detail.php?id=<?= $category_row->id; ?>" class="btn btn-custom">Selengkapnya</a>
                         </li>
                     </ul>
                 </div>
@@ -245,7 +244,7 @@
                     </div> 
                 <?php endforeach; ?>
 
-                <a href="testimoni.php" class="btn btn-lg btn-block btn-explore">Testimoni lain</a>
+                <a href="user/testimoni.php" class="btn btn-lg btn-block btn-explore">Testimoni lain</a>
             </div>
         </div><!-- end of col-lg-12 -->
     </div><!-- end of row -->
@@ -264,11 +263,11 @@
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="js/jquery-3.2.1.slim.min.js"></script>
-<script src="../js/jquery.min.js"></script>
-<script src="../js/popper.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/bootstrap-datepicker.min.js"></script>
-<script src="../js/savy.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="js/savy.js"></script>
 <script>
 
     $(document).ready(function () {

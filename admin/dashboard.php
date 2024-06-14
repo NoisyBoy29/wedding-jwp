@@ -6,7 +6,6 @@
 
     $user_count =  Account_Details::count_user();
     $booking_count =  Booking::count_booking();
-    $gallery_count =  Gallery::count_all();
     $event_post =  EventWedding::count_all();
 ?>
 <?php $users_profile = Users::find_by_id($_SESSION['id']); ?>
@@ -140,14 +139,6 @@
         <i class="mdi mdi-book-open-page-variant"></i>
         <span class="count-numbers"><?=  $booking_count; ?></span>
         <span class="count-name">Total Pesanan</span>
-      </div>
-    </div>
-
-    <div class="col-lg-3">
-      <div class="card-counter danger">
-        <i class="mdi mdi-image-multiple"></i>
-        <span class="count-numbers"><?=  $gallery_count; ?></span>
-        <span class="count-name">Foto</span>
       </div>
     </div>
 

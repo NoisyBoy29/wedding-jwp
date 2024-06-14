@@ -33,7 +33,7 @@
                     </li>
                     <li class="nav-item"><div class="dropdown-divider"></div></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog_events.php">
+                        <a class="nav-link" href="testimoni.php">
                             <i class="mdi mdi-comment-text mr-3" style="color:#795548;"></i>
                             Kelola Testimoni Client
                         </a>
@@ -54,22 +54,7 @@
                         </a>
                     </li>
                     <li class="nav-item"><div class="dropdown-divider"></div></li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="photos_view.php">
-                            <i class="mdi mdi-image-multiple mr-3" style="color:#673ab7!important"></i>
-                            Kelola Galeri Foto
-                        </a>
-                    </li>
-
-                    <li class="nav-item"><div class="dropdown-divider"></div></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="photos_add.php">
-                            <i class="mdi mdi-upload-multiple mr-3" style="color: #e91e63!important"></i>
-                            Tambah Foto Galeri
-                        </a>
-                    </li>
-                    <li class="nav-item"><div class="dropdown-divider"></div></li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="users.php">
                             <i class="mdi mdi-account-card-details mr-3" style=" color: #03a9f4!important;"></i>

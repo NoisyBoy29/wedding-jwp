@@ -37,7 +37,7 @@
     <link href="../css/signin.css" rel="stylesheet">
     <style>
         body {
-            background: url("../bgw.jpg");
+            background: url("../bglogin.jpg");
             /* background-color: black; */
             background-size: 100%;
         }
@@ -51,19 +51,19 @@
 <body class="text-center">
 <form class="form-signin" action="" method="post">
     <a href="index.php"><img class="mb-4" src="../images/logo/JeWePe.png" width="190" ></a>
-    <h5 class="h5 mb-3 font-weight-normal" style="color:#222">Login As Administrator</h5>
+    <h5 class="h5 mb-3 font-weight-normal" style="color:#222">Login Admin</h5>
     <?php
         if ($session->message()) {
             echo $session->message();
         }
     ?>
-    <label for="inputEmail" class="sr-only">Email address</label>
+    <label for="inputEmail" class="sr-only">Email</label>
     <input type="text" id="inputEmail" name="input_email" class="form-control" placeholder="Email Address" required autofocus>
 
     <label for="inputPassword" class="sr-only">Password</label>
     <input type="password" id="inputPassword" name="input_password" class="form-control" placeholder="Password" required>
 
-    <button class="btn btn-md btn-danger btn-block" type="submit" name="login">Log In</button>
+    <button class="btn btn-md btn-danger btn-block" type="submit" name="login">LOGIN</button>
     <p class="mt-5 mb-3 text-muted">&copy; <?php echo date('Y')?></p>
 </form>
 <script src="js/jquery-3.2.1.slim.min.js"></script>

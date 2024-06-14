@@ -17,8 +17,6 @@ require_once(INCLUDES_PATH.DS."Guest.php");
 require_once(INCLUDES_PATH.DS."Categories.php");
 require_once(INCLUDES_PATH.DS."Features.php");
 require_once(INCLUDES_PATH.DS."EventWedding.php");
-require_once(INCLUDES_PATH.DS."Gallery.php");
 require_once(INCLUDES_PATH.DS."Users.php");
 require_once(INCLUDES_PATH.DS."Events.php");
-require_once(INCLUDES_PATH.DS."Liquidation.php");
 ?>

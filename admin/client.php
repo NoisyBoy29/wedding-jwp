@@ -87,20 +87,10 @@
             <th>Email Utama</th>
             <th>Kontak Hp</th>
             <th>Tanggal Pernikahan</th>
-            <th>Tools</th>
+            <th>Aksi</th>
         </tr>
     </thead>
-    <!-- <tfoot>
-        <tr>
-            <th>Nama Pemesan</th>
-            <th>Nama Pengantin Wanita</th>
-            <th>Nama Pengantin Pria</th>
-            <th>Email Utama</th>
-            <th>Kontak Hp</th>
-            <th>Tanggal Pernikahan</th>
-            <th>Tools</th>
-        </tr>
-    </tfoot> -->
+
     <tbody>
     <?php foreach ($booking as $bookWedding) : ?>
         
@@ -122,9 +112,9 @@
             
             <td>
 
-                <a href="client_assign.php?booking=<?= $bookWedding->booking_id; ?>&user_id=<?= $bookWedding->user_id; ?>" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="Assign user to weddings"><i class="mdi mdi-clipboard-account"></i></a>
+                <a href="client_assign.php?booking=<?= $bookWedding->booking_id; ?>&user_id=<?= $bookWedding->user_id; ?>" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="ReKonfirmasi Client"><i class="mdi mdi-clipboard-account"></i></a>
 
-                <a href="client_edit.php?booking=<?= $bookWedding->booking_id; ?>&user_id=<?= $bookWedding->user_id; ?>" class="btn btn-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Edit client account information"><i class="mdi mdi-account-edit"></i></a>
+                <a href="client_edit.php?booking=<?= $bookWedding->booking_id; ?>&user_id=<?= $bookWedding->user_id; ?>" class="btn btn-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Edit Data Client"><i class="mdi mdi-account-edit"></i></a>
 
             </td>
         </tr>
@@ -147,20 +137,9 @@
             <th>Email Utama</th>
             <th>Kontak Hp</th>
             <th>Tanggal Pernikahan</th>
-            <th>Tools</th>
+            <th>Aksi</th>
         </tr>
     </thead>
-    <!-- <tfoot>
-        <tr>
-            <th>Nama Pemesan</th>
-            <th>Nama Pengantin Wanita</th>
-            <th>Nama Pengantin Pria</th>
-            <th>Email Utama</th>
-            <th>Kontak Hp</th>
-            <th>Tanggal Pernikahan</th>
-            <th>Tools</th>
-        </tr>
-    </tfoot> -->
     <tbody>
     <?php foreach ($booking_confirm as $booking_confirm_row) : ?>
         
@@ -182,11 +161,9 @@
             
             <td>
 
-                <a href="client_assign.php?booking=<?= $booking_confirm_row->booking_id; ?>&user_id=<?= $booking_confirm_row->user_id; ?>" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="Assign user to weddings"><i class="mdi mdi-clipboard-account"></i></a>
+                <a href="client_assign.php?booking=<?= $booking_confirm_row->booking_id; ?>&user_id=<?= $booking_confirm_row->user_id; ?>" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="Kelola data booking"><i class="mdi mdi-clipboard-account"></i></a>
 
-                <a href="client_edit.php?booking=<?= $booking_confirm_row->booking_id; ?>&user_id=<?= $booking_confirm_row->user_id; ?>" class="btn btn-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Edit client account information"><i class="mdi mdi-account-edit"></i></a>
-
-                <a href="client_manage_account_details.php?booking_id=<?= $booking_confirm_row->booking_id; ?>&user_id=<?= $booking_confirm_row->user_id; ?>" class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top" title="Enter client workbook to manage all wedding details"><i class="mdi mdi-account-card-details"></i></a>
+                <a href="client_manage_account_details.php?booking_id=<?= $booking_confirm_row->booking_id; ?>&user_id=<?= $booking_confirm_row->user_id; ?>" class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top" title="Kelola buku tamu"><i class="mdi mdi-account-card-details"></i></a>
 
             </td>
         </tr>

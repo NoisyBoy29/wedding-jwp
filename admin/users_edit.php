@@ -40,7 +40,7 @@
             if(empty($_FILES['profile_picture'])) {
               $users->save();
                redirect_to("users.php");
-              $session->message("The photo has been updated");
+              $session->message("The photo Diubah");
             } else {
               $users->set_file($_FILES['profile_picture']);
               $users->save_image();
@@ -48,7 +48,7 @@
               redirect_to("users.php");
               $session->message("
                 <div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-                  <strong><i class='mdi mdi-check'></i></strong>The {$users->firstname} {$users->lastname} is successfully updated.
+                  <strong><i class='mdi mdi-check'></i></strong>The {$users->firstname} {$users->lastname} is Berhasil diubah.
                   <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                     <span aria-hidden=\"true\">&times;</span>
                   </button>
@@ -129,23 +129,23 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputFirstname">Nama Depan:</label>
-                        <input type="text" name="firstname" class="form-control" value="<?= $users->firstname; ?>" id="inputFirstname"  placeholder="Enter firstname">
+                        <input type="text" name="firstname" class="form-control" value="<?= $users->firstname; ?>" id="inputFirstname"  placeholder="Masukan firstname">
                     </div>
                    <div class="form-group col-md-6">
                         <label for="inputLastname">Nama Belakang:</label>
-                        <input type="text" name="lastname" class="form-control" value="<?= $users->lastname; ?>" id="inputLastname"  placeholder="Enter lastname">
+                        <input type="text" name="lastname" class="form-control" value="<?= $users->lastname; ?>" id="inputLastname"  placeholder="Masukan lastname">
                     </div>
                    
                 </div>
                 
                 <div class="form-group">
                     <label for="inputEmail">Email:</label>
-                    <input type="text" name="email" class="form-control"  value="<?= $users->email; ?>" id="inputEmail" placeholder="Enter email">
+                    <input type="text" name="email" class="form-control"  value="<?= $users->email; ?>" id="inputEmail" placeholder="Masukan email">
                 </div>
 
                 <div class="form-group">
                     <label for="inputUsername">Username:</label>
-                    <input type="text" name="username" class="form-control"  value="<?= $users->username; ?>" id="inputUsername" placeholder="Enter username">
+                    <input type="text" name="username" class="form-control"  value="<?= $users->username; ?>" id="inputUsername" placeholder="Masukan username">
                 </div>
 
                  <div class="form-group">
@@ -163,7 +163,7 @@
 
                 <div class="form-group">
                     <label for="inputAddress">Address</label>
-                    <textarea rows="5" name="address" class="form-control" id="inputAddress"  placeholder="Enter address"><?= $users->address;  ?></textarea>
+                    <textarea rows="5" name="address" class="form-control" id="inputAddress"  placeholder="Masukan address"><?= $users->address;  ?></textarea>
                 </div>
 
                  <div class="form-group">
@@ -179,7 +179,7 @@
                     </select>
                 </div>
                   
-            </form><!-- end of input form -->
+            </form>
         </div>
     </div>
 </div>

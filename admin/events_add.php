@@ -34,7 +34,7 @@
         redirect_to("Events.php");
         $session->message("
             <div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-              <strong><i class='mdi mdi-check'></i></strong> {$features->title} is successfully added.
+              <strong><i class='mdi mdi-check'></i></strong> {$features->title} Berhasil ditambahkan
               <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                 <span aria-hidden=\"true\">&times;</span>
               </button>
@@ -103,28 +103,28 @@
 
                     <div class="form-group">
                         <label for="family">Number of Family:</label>
-                        <input type="text" name="family" class="form-control" id="family"  placeholder="Enter the number">
+                        <input type="text" name="family" class="form-control" id="family"  placeholder="Masukan the number">
                     </div>
 
                     <div class="form-group">
                         <label for="individual">Number of individual:</label>
-                        <input type="text" name="individual" class="form-control" id="individual"  placeholder="Enter the number">
+                        <input type="text" name="individual" class="form-control" id="individual"  placeholder="Masukan the number">
                     </div>
 
                     <div class="form-group">
                         <label for="yes">Number of yes:</label>
-                        <input type="text" name="yes" class="form-control" id="yes"  placeholder="Enter the number">
+                        <input type="text" name="yes" class="form-control" id="yes"  placeholder="Masukan the number">
                     </div>
 
                     <div class="form-group">
                         <label for="no">Number of no:</label>
-                        <input type="text" name="no" class="form-control" id="no"  placeholder="Enter the number">
+                        <input type="text" name="no" class="form-control" id="no"  placeholder="Masukan the number">
                     </div>
 
                      <a href="Events.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;">Batal</a>
                     <button type="submit" name="submit" class="btn btn-sm btn-light float-right mr-2" style="font-size: 12px;">Simpan</button>
 
-                </form><!-- end of input form -->
+                </form>
             </div>
         </div>
     </div>

@@ -9,13 +9,11 @@
     if (isset($_POST['submit'])) {
             $firstname   = clean($_POST['firstname']);
             $lastname    = clean($_POST['lastname']);
-            $address     = clean($_POST['address']);
             $email       = clean($_POST['email']);
             $username    = clean($_POST['username']);
-            $gender      = clean($_POST['gender']);
             $designation = clean($_POST['designation']);
 
-             if (empty($firstname) || empty($lastname) || empty($address) || empty($email) || empty($username)) {
+             if (empty($firstname) || empty($lastname) || empty($email) || empty($username)) {
                 redirect_to("users_add.php");
                 $session->message("
                 <div class=\"alert alert-danger alert-dismissible fade show\" role=\"alert\">
@@ -30,19 +28,16 @@
             if ($users_profile) {
                 $users_profile->firstname = $firstname;
                 $users_profile->lastname = $lastname;
-                $users_profile->address = $address;
                 $users_profile->email = $email;
                 $users_profile->username = $username;
-                $users_profile->gender = $gender;
                 $users_profile->designation = $designation;
-                // $users_profile->date_created = date("F j, Y, g:i a"); 
 
                 if(empty($_FILES['profile_picture'])) {
                   $users_profile->save();
                    redirect_to("users_profile.php");
                   $session->message("
                     <div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-                      <strong><i class='mdi mdi-check'></i></strong>The {$users_profile->firstname} {$users_profile->lastname} is successfully updated.
+                      <strong><i class='mdi mdi-check'></i></strong>The {$users_profile->firstname} {$users_profile->lastname} is Berhasil diubah.
                       <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                         <span aria-hidden=\"true\">&times;</span>
                       </button>
@@ -54,7 +49,7 @@
                   redirect_to("users_profile.php");
                   $session->message("
                     <div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-                      <strong><i class='mdi mdi-check'></i></strong>The {$users_profile->firstname} {$users_profile->lastname} is successfully updated.
+                      <strong><i class='mdi mdi-check'></i></strong>The {$users_profile->firstname} {$users_profile->lastname} is Berhasil diubah.
                       <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                         <span aria-hidden=\"true\">&times;</span>
                       </button>
@@ -128,7 +123,7 @@
     <div class="col-lg-8 offset-2 pl-3 pb-3 box-shadow mt-4">
             <form method="post" action="" enctype="multipart/form-data">
             
-                <h6 class="h6 mt-4 pb-2" style="border-bottom: 1px solid #dee2e6!important;">Profile Detail
+                <h6 class="h6 mt-4 pb-2" style="border-bottom: 1px solid #dee2e6!important;">Data Admin
                    
                 </h6>
 
@@ -145,57 +140,37 @@
                 </div>
                 <div class="custom-file mb-3" style="font-size: 13px;">
                   <input type="file" class="custom-file-input" id="customFile" name="profile_picture">
-                  <label class="custom-file-label" for="customFile">Edit Profile Picture</label>
+                  <label class="custom-file-label" for="customFile">Edit Foto Profil</label>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputFirstname">Nama Depan:</label>
-                        <input type="text" name="firstname" class="form-control" value="<?= $users_profile->firstname; ?>" id="inputFirstname"  placeholder="Enter firstname">
+                        <input type="text" name="firstname" class="form-control" value="<?= $users_profile->firstname; ?>" id="inputFirstname"  placeholder="Masukan firstname">
                     </div>
                    <div class="form-group col-md-6">
                         <label for="inputLastname">Nama Belakang:</label>
-                        <input type="text" name="lastname" class="form-control" value="<?= $users_profile->lastname; ?>" id="inputLastname"  placeholder="Enter lastname">
+                        <input type="text" name="lastname" class="form-control" value="<?= $users_profile->lastname; ?>" id="inputLastname"  placeholder="Masukan lastname">
                     </div>
                    
                 </div>
                 
                 <div class="form-group">
                     <label for="inputEmail">Email:</label>
-                    <input type="text" name="email" class="form-control"  value="<?= $users_profile->email; ?>" id="inputEmail" placeholder="Enter email">
+                    <input type="text" name="email" class="form-control"  value="<?= $users_profile->email; ?>" id="inputEmail" placeholder="Masukan email">
                 </div>
 
                 <div class="form-group">
                     <label for="inputUsername">Username:</label>
-                    <input type="text" name="username" class="form-control"  value="<?= $users_profile->username; ?>" id="inputUsername" placeholder="Enter username">
+                    <input type="text" name="username" class="form-control"  value="<?= $users_profile->username; ?>" id="inputUsername" placeholder="Masukan username">
                 </div>
 
                  <div class="form-group">
-                        <label for="gender">Gender:</label>
-                        <select name="gender" class="custom-select" id="gender">
-                            <?php if($users_profile->gender == 'm') : ?>
-                                <option value="m" selected>Male</option>
-                                <option value="f">Female</option>
-                            <?php else: ?>
-                                <option value="m">Male</option>
-                                <option value="f" selected>Female</option>
-                            <?php endif; ?>
-                        </select>
-                    </div>
-
-                <div class="form-group">
-                    <label for="inputAddress">Address</label>
-                    <textarea rows="5" name="address" class="form-control" id="inputAddress"  placeholder="Enter address"><?= $users_profile->address;  ?></textarea>
-                </div>
-
-                 <div class="form-group">
-                    <label for="designation">Designation:</label>
+                    <label for="designation">Role:</label>
                     <select name="designation" id="designation" class="custom-select">
                         <?php if($users_profile->designation == 0) : ?>
                             <option value="0" selected>Administrator</option>
-                            <option value="1">Moderator</option>
                         <?php else: ?>
                             <option value="0">Administrator</option>
-                            <option value="1" selected>Moderator</option>
                         <?php endif; ?>
                     </select>
                 </div>
@@ -204,9 +179,9 @@
                 </a>
 
                 <button type="submit" name="submit" class="btn btn-sm btn-success float-right mr-2" style="font-size: 12px;">
-                    <i class="mdi mdi-account-plus mr-2"></i> Edit My Account
+                    <i class="mdi mdi-account-plus mr-2"></i> Simpan Edit
                 </button>
-            </form><!-- end of input form -->
+            </form>
     </div>
 </div>
 

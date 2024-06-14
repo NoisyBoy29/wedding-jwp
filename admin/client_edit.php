@@ -23,15 +23,12 @@
             $phone = clean($_POST['phone']);
             $city = clean($_POST['city']);
             $wedding_type = clean($_POST['wedding_type']);
-            $organizer_id = clean($_POST['organizer_id']);
 
             $booking_detail->bride = $bride;
             $booking_detail->groom = $groom;
             $booking_detail->wedding_type = $wedding_type;
             $accounts->user_email = $booking_detail->user_email = $email;
-            $booking_detail->wedding_date = $wedding_date;
-            $booking_detail->organizer_id = $organizer_id;
-            
+            $booking_detail->wedding_date = $wedding_date;           
             $account_detail->firstname = $firstname;
             $account_detail->lastname = $lastname;
             $account_detail->phone = $phone;
@@ -45,7 +42,7 @@
             redirect_to("client.php");
             $session->message("
             <div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-              <strong><i class='mdi mdi-approval'></i></strong> {$account_detail->firstname} {$account_detail->lastname} has been successfully modify.
+              <strong><i class='mdi mdi-approval'></i></strong> {$account_detail->firstname} {$account_detail->lastname} Berhasil diubah.
               <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                 <span aria-hidden=\"true\">&times;</span>
               </button>
@@ -62,7 +59,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Edit Client Information</title>
+        <title>Edit Data Client</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/dashboard.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
@@ -97,27 +94,27 @@
 
                 <form method="post" action="">
 
-                    <h4 class="h4 mt-4 pb-2" style="border-bottom: 1px solid #dee2e6!important;">Edit Client Information
+                    <h4 class="h4 mt-4 pb-2" style="border-bottom: 1px solid #dee2e6!important;">Edit Data Client
                         <a href="client.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;"><i class="mdi mdi-close-circle mr-2"></i> Batal</a>
-                        <button type="submit" name="submit" class="btn btn-sm btn-success float-right mr-2" style="font-size: 12px;"><i class="mdi mdi-account-plus mr-2"></i> Edit Customer</button>
+                        <button type="submit" name="submit" class="btn btn-sm btn-success float-right mr-2" style="font-size: 12px;"><i class="mdi mdi-account-plus mr-2"></i> Simpan Data</button>
                     </h4>
                     <div class="form-row">
 
                         <div class="form-group col-md-6">
                             <label for="inputFirstname">Nama Depan</label>
-                            <input type="text" name="firstname" class="form-control" id="inputFirstname" value="<?= $account_detail->firstname; ?>" placeholder="Enter firstname">
+                            <input type="text" name="firstname" class="form-control" id="inputFirstname" value="<?= $account_detail->firstname; ?>" placeholder="Masukan firstname">
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="inputLastname">Nama Belakang</label>
-                            <input type="text" name="lastname" class="form-control" id="inputLastname" value="<?= $account_detail->lastname; ?>" placeholder="Enter lastname">
+                            <input type="text" name="lastname" class="form-control" id="inputLastname" value="<?= $account_detail->lastname; ?>" placeholder="Masukan lastname">
                         </div>
 
                     </div>
 
                     <div class="form-group">
                         <label for="inputEmail">Email</label>
-                        <input type="text" name="email" class="form-control" id="inputEmail" value="<?= $booking_detail->user_email; ?>" placeholder="Enter email">
+                        <input type="text" name="email" class="form-control" id="inputEmail" value="<?= $booking_detail->user_email; ?>" placeholder="Masukan email">
                     </div>
 
                     <div class="form-row form-group">
@@ -143,15 +140,6 @@
                             </div>
                         </div>
 
-                        <!-- <div class="input-group col-md-6">
-                            <select class="form-control" id="wedding_type" name="wedding_type">
-                                <?php foreach($categories as $category) : ?>
-                                    <option value="<?= $category->wedding_type;?>"><?= $category->wedding_type; ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div> -->
-
-
                         <div class="input-group col-md-6">
                             <select class="form-control" id="wedding_type" name="wedding_type">
 
@@ -171,11 +159,11 @@
 
                     <div class="form-group">
                         <label for="brideName">Nama Pengantin Wanita</label>
-                        <input type="text" name="bride" class="form-control" value="<?= $booking_detail->bride; ?>" id="brideName" placeholder="Enter Nama Pengantin Wanita">
+                        <input type="text" name="bride" class="form-control" value="<?= $booking_detail->bride; ?>" id="brideName" placeholder="Masukan Nama Pengantin Wanita">
                     </div>
                     <div class="form-group">
                         <label for="GroomsName">Nama Pengantin Pria</label>
-                        <input type="text" name="groom" class="form-control" value="<?= $booking_detail->groom; ?>" id="GroomsName" placeholder="Enter Nama Pengantin Pria">
+                        <input type="text" name="groom" class="form-control" value="<?= $booking_detail->groom; ?>" id="GroomsName" placeholder="Masukan Nama Pengantin Pria">
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
@@ -187,17 +175,7 @@
                             <input type="text" class="form-control" value="<?= $account_detail->city; ?>" id="inputcity" name="city" placeholder="Kota">
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputOrganizer">Assigned Organizer</label>
-                            <select class="form-control" id="inputOrganizer" name="organizer_id">
-                                <option value="1">Big Day Planners</option>
-                                <option value="2">Joyful Events</option>
-                                <option value="3">Roses and Co</option>
-                            </select>
-                        </div><!-- form-group col-md-6 -->
-                    </div><!-- end of form-row -->
-                </form><!-- end of input form -->
+                </form>
             </div>
         </div>
     </div>

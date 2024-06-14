@@ -3,13 +3,8 @@
     $count = 0;
     $error = '';
     if (!isset($_SESSION['id'])) { redirect_to("../"); }
-
-    // $booking_id = $_GET['category'];
-    // $user_id = $_GET['user_id'];
     $category = Category::find_all();
     $event_wedding =  new EventWedding();
-    // $account_detail =  new Account_Details();
-    // $booking_detail =  new category();
 
     if (isset($_POST['submit']) || isset($_FILES['preview_image'])) {
 
@@ -21,7 +16,7 @@
         $wedding_type = clean($_POST['wedding_type']);
         
          if (empty($title) || empty($description) || empty($wedding_date) || empty($location)) {
-            redirect_to("blog_events_add.php");
+            redirect_to("testimoni_add.php");
             $session->message("
             <div class=\"alert alert-danger alert-dismissible fade show\" role=\"alert\">
               <strong><i class='mdi mdi-account-alert mr-2'></i></strong> Please Fill up all the information.
@@ -47,10 +42,10 @@
         $event_wedding->save_image();
 
          if ($event_wedding->save()) {
-            redirect_to("blog_events.php");
+            redirect_to("testimoni.php");
             $session->message("
             <div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-              <strong><i class='mdi mdi-account-alert mr-2'></i></strong> The {$event_wedding->title} is successfully added.
+              <strong><i class='mdi mdi-account-alert mr-2'></i></strong> The {$event_wedding->title} Berhasil ditambahkan
               <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                 <span aria-hidden=\"true\">&times;</span>
               </button>
@@ -67,7 +62,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Add New Article</title>
+        <title>Tambah Testimoni Client</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/dashboard.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
@@ -102,11 +97,11 @@
                
                 <form action="" method="post" enctype="multipart/form-data">
                     <?= isset($msg) ? $msg : ''; ?>
-                    <h4 class="h4 mt-4 pb-2" style="border-bottom: 1px solid #dee2e6!important;">New Article 
+                    <h4 class="h4 mt-4 pb-2" style="border-bottom: 1px solid #dee2e6!important;">Tambah Testimoni 
 
-                        <a href="blog_events.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;"><i class="mdi mdi-close-circle mr-2"></i> Batal</a>
+                        <a href="testimoni.php" class="btn btn-sm btn-danger float-right" style="font-size: 12px;"><i class="mdi mdi-close-circle mr-2"></i> Batal</a>
 
-                        <button type="submit" name="submit" class="btn btn-sm btn-success float-right mr-2" style="font-size: 12px;"><i class="mdi mdi-account-plus mr-2"></i> Simpan article</button>
+                        <button type="submit" name="submit" class="btn btn-sm btn-success float-right mr-2" style="font-size: 12px;"><i class="mdi mdi-account-plus mr-2"></i> Simpan Testimoni</button>
 
                     </h4>
                         <?php
@@ -124,25 +119,16 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="wedding_post">Related Wedding Post:</label>
-                            <select class="custom-select form-control" id="wedding_type" name="wedding_post">
-                              <?php foreach($category as $category_item) : ?>
-                                  <option value="<?= $category_item->wedding_type; ?>" selected><?= ucfirst($category_item->wedding_type); ?></option>
-                              <?php endforeach; ?>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="title">Title</label>
+                            <label for="title">Nama Pasangan</label>
                             <input type="text" name="title" 
                             class="form-control" 
                             id="title"  
-                            placeholder="Enter article title">
+                            placeholder="Masukan nama kedua mempelai">
                         </div>
 
                     <div class="form-group">
-                        <label for="description">Deskripsi:</label>
-                        <textarea name="description" id="description" cols="30" rows="10" class="form-control" placeholder="Enter description and vendor of this wedding"></textarea>
+                        <label for="description">Testimoni:</label>
+                        <textarea name="description" id="description" cols="30" rows="10" class="form-control" placeholder="Masukan testimoni"></textarea>
                     </div>
 
                     <div class="form-group">
@@ -165,8 +151,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="location">Location</label>
-                        <input type="text" name="location" class="form-control"  id="location" placeholder="Enter Nama Pengantin Wanita">
+                        <label for="location">Lokasi</label>
+                        <input type="text" name="location" class="form-control"  id="location" placeholder="Masukan Lokasi Pernikahan">
                     </div>
 
                     <div class="form-group">
@@ -176,7 +162,7 @@
                             <option value="1">Publish</option>
                         </select>
                     </div>
-                </form><!-- end of input form -->
+                </form>
             </div>
             <div class="col-lg-3 mt-4">
                 <img id="preview_image" src="https://via.placeholder.com/350x350" width="300" height="350" alt="">
