@@ -99,7 +99,7 @@
                         <label for="wedding_type">Paket Pernikahan</label>
                         <select name="wedding_type" id="wedding_type" class="form-control">
                         <?php foreach ($category as $categories) : ?>
-                            <option value="<?= $categories->id; ?>"><?= $categories->wedding_type; ?> - Price: <?= number_format($categories->price, 2); ?></option>
+                            <option value="<?= $categories->id; ?>"><?= $categories->wedding_type; ?> - Harga: <?= number_format($categories->price, 2); ?></option>
                         <?php endforeach; ?>
                         </select>
                     </div>

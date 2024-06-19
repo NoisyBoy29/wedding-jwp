@@ -92,7 +92,7 @@ $blogspot = EventWedding::find_by_id($id);
 
         </div><!-- end of col-md-8 p-0 pl-3 -->
     </div>
-</div><!-- end of container -->
+</div>
 
 
 

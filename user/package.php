@@ -5,7 +5,6 @@ $category = Category::find_all();
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Wedding Planner</title>
@@ -85,9 +84,9 @@ $category = Category::find_all();
 <div class="container" style="width: 70%;">
 
     <div class="row mb-3">
-        <div class="col-lg-12">
-            <h3 class="h2 text-uppercase text-center text-muted">Daftar</h3>
-            <h2 class="h5 text-uppercase text-center mb-0">Paket Wedding</h2>
+    <div class="col-lg-12">
+            <h4 class="h2 text-center mb-0">Daftar Paket</h4>
+            <p class="text-muted text-center">beragam harga , beragam fitur</p>
         </div>
     </div>
 
@@ -117,7 +116,7 @@ $category = Category::find_all();
         </div>
         <?php endforeach; ?>
 
-</div><!-- end of container -->
+</div>
 
 
 

@@ -361,9 +361,9 @@ if (isset($_POST['register'])) {
                 <div class="col col-lg-3">
                 </div>
             </div>
-        </div><!-- end of hero -->
-    </div> <!-- end of row justify-content-md-center -->
-</div><!-- end of container-fluid  -->.
+        </div>
+    </div>
+</div>.
 
 <footer class="pt-3">
     <div class="row">
